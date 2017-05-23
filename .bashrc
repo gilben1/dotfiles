@@ -8,8 +8,7 @@ case $- in
       *) return;;
 esac
 
-#~/ascii_art/affinity.ascii
-cat ~/ascii_art/affinitext5.ascii
+cat ~/ascii_art/affinitext.ascii
 
 
 
