@@ -129,10 +129,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [ -x /usr/bin/mint-fortune ]; then
-     /usr/bin/mint-fortune
-fi
-
 export PATH="$HOME/.bin/scripts:$PATH"
 #xterm-256color
 export LC_ALL=en_US.UTF-8
