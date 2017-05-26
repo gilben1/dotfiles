@@ -260,6 +260,11 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 # Launch update manager for taskbar thing
 exec --no-startup-id mintupdate-launcher
 
+exec killall -q fsnotify_mark
+
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+
+
 # Background setting
 
 #exec --no-startup-id hsetroot -solid "#003300"

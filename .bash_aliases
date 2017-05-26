@@ -40,13 +40,11 @@ alias serenity='ssh -4 nickg@serenity.cat.pdx.edu'
 
 function irc()
 {
-    if ! ps -eo args | grep "[l]isten.sh" > /dev/null ; then
-        echo "Starting up notification script"
-        listen.sh &
-    else
-        echo "Notification script already running" 
-    fi
+    echo "Starting up notification script"
+    listen.sh &
+
     ssh -4 nickg@serenity.cat.pdx.edu
+    kill $(ps -s $$ -o pid=)
 }
 
 function set-title() {
