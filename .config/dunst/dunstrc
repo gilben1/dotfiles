@@ -24,7 +24,8 @@ horizontal_padding = 8
 separator_color = frame
 startup_notification = false
 # https://github.com/knopwob/dunst/issues/26#issuecomment-36159395
-#icon_position = left
+icon_position = left
+max_icon_size = 24
 #icon_folders = /usr/share/icons/elementary/actions/16/
 
 [frame]
@@ -39,15 +40,15 @@ context = ctrl+shift+period
 
 [urgency_low]
 background = "#181818"
-foreground = "#E3C7AF"
+foreground = "#FFFFFF"
 timeout = 5
 
 [urgency_normal]
 background = "#181818"
-foreground = "#E3C7AF"
+foreground = "#FFFFFF"
 timeout = 20
 
 [urgency_critical]
 background = "#181818"
-foreground = "#E3C7AF"
+foreground = "#FFFFFF"
 timeout = 0
