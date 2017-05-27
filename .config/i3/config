@@ -207,8 +207,7 @@ bar {
 
         font pango:DejaVu Sans Mono, FontAwesome 7.1
 
-        separator_symbol ""
-
+        separator_symbol "│"
 
         tray_output LVDS1
         #strip_workspace_numbers yes
