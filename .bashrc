@@ -64,11 +64,25 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+
+__blue='\[\033[01;34m\]'
+__green='\[\033[01;32m\]'
+__default='\[\033[00m\]'
+__user_and_host='\u@\h'
+__current_dir='\w'
+__git_branch='$(__git_ps1)'
+__git_color='\[\033[01;32m\]'
+
 if [ "$color_prompt" = yes ]; then
     if [[ ${EUID} == 0 ]] ; then
         PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
     else
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\][\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w] \$\[\033[00m\] '
+        #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\][\[\033[01;32m\]\u@\h \[\033[01;34m\]\w]\[\033[00m\]$(__git_ps1) \$\[\033[00m\] '
+        PS1="${debian_chroot:+($debian_chroot)}${__blue}[${__green}${__user_and_host} ${__blue}${__current_dir}]${__git_color}${__git_branch} ${__blue}\$${__default} "
     fi
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h \w \$ '
