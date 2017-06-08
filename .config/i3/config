@@ -43,7 +43,7 @@ bindsym Ctrl+$ALT+g exec "google-chrome"
 bindsym $mod+e exec --no-startup-id "nemo"
 
 # Launch system monitor
-bindsym Ctrl+Shift+Escape exec --no-startup-id "gnome-system-monitor"
+bindsym $mod+grave [title="^[hH]top$"] scratchpad show, move position center
 
 # Launch minecraft start script
 bindsym $mod+u exec --no-startup-id "~/.bin/scripts/minecraft"
@@ -57,14 +57,11 @@ bindsym --release Print exec "~/.bin/scripts/screencap"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-#bindsym $mod+r exec --no-startup-id i3-dmenu-desktop
-#bindsym $mod+r exec --no-startup-id j4-dmenu-desktop
 bindsym $mod+r exec --no-startup-id j4-dmenu-desktop --dmenu='rofi -i -dmenu -opacity 90 -fg "#5bb141" -bg "#111111" -hlfg "#111111" -hlbg "#5bb141" -bc "#5bb141" -width 50 -separator-style "solid" -font "Consolas 10" -p "run:" '
-#bindsym $mod+r exec --no-startup-id "~/.bin/scripts/rofi.bash"
 
 
+# Window selection
 bindsym $mod+f exec --no-startup-id rofi -modi window -show window -opacity 90 -fg "#5bb141" -fg-active "#ffffff" -bg "#111111" -hlfg "#111111" -hlfg-active "#000000" -hlbg-active "#ffffff" -bg-active "#111111" -hlbg "#5bb141" -bc "#5bb141" -width 50 -separator-style "solid" -font "Consolas 10"
-#bindsym $mod+r exec dmenu_run
 
 ### System Control ###
 
@@ -80,10 +77,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 bindsym $mod+n exec "~/.bin/scripts/rename.bash"
 
 # Monitor setup, puts output of VGA port to left of laptop screen
-#bindsym $mod+m exec "xrandr --output VGA1 --auto --left-of LVDS1"
 bindsym $mod+m exec "~/.bin/scripts/toggle_vga.bash"
-# Diasbles VGA output
-#bindsym $mod+Shift+m exec "xrand --output VGA1 --off"
 
 # Raise and lower volume, and toggle mute 
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
@@ -171,7 +165,7 @@ bindsym Ctrl+$ALT+Shift+Left move container to workspace prev_on_output
 workspace_auto_back_and_forth yes
 
 bindsym $mod+Shift+minus move container to scratchpad
-bindsym $mod+minus scratchpad show
+bindsym $mod+minus scratchpad show, move position center
 
 
 ### I3 Reset / Config Stuff ###
@@ -184,14 +178,11 @@ bindsym $mod+Shift+r restart
 bindsym Ctrl+$ALT+Delete exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 ### Window Colors ###
-# affinity green = #64902f
 set $affinigreen "#64902f"
 set $oldgreen "#5bb341"
 
 #class                 border  backgr. text    indicator
 client.focused          $oldgreen $oldgreen #ffffff #1a00ff
-#client.focused          #64902f #64902f #ffffff #1a00ff
-#client.focused          $affinigreen $affinigreen #ffffff #1a00ff
 client.focused_inactive #333333 #5f676a #ffffff #1a00ff
 client.unfocused        #333333 #222222 #888888 #1a00ff
 client.urgent           #2f343a #900000 #ffffff #1a00ff
@@ -215,7 +206,7 @@ bar {
                 background #333333
                 statusline #ffffff
                 separator #777777
-                
+
                 #class            border  backgr. text
                 focused_workspace  $oldgreen $oldgreen #ffffff
                 active_workspace   #5f676a #5f676a #ffffff
@@ -234,8 +225,12 @@ for_window [title=" - Google Chrome"] border none
 # Automatically move calculator to scratchpad when launched
 for_window [class="calculator"] move scratchpad
 
-for_window [title="MCECS VPN"] move scratchpad
+for_window [title="^MCECS VPN$"] move scratchpad
 
+
+
+for_window [title="^[hH]top$"] floating enable, resize set 1360 600, move scratchpad
+exec --no-startup-id i3-sensible-terminal -t htop -e "htop"
 
 ### Startup / Misc. Settings ###
 
@@ -253,22 +248,19 @@ exec --no-startup-id compton --config ~/.config/compton.conf -b
 # Start authentication agent, so I can update via gui
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 
+
+
 # Network manager applet
 #exec --no-startup-id nm-applet
 
 # Launch update manager for taskbar thing
 exec --no-startup-id mintupdate-launcher
 
+# kill old notification daemon and startup dunst
 exec killall -q fsnotify_mark
-
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 
 # Background setting
 
-#exec --no-startup-id hsetroot -solid "#003300"
 exec --no-startup-id hsetroot -solid "#000000"
-#exec --no-startup-id hsetroot -cover ~/Pictures/outrun.jpg
-#exec --no-startup-id hsetroot -cover ~/Pictures/outrun2.png
-#exec --no-startup-id hsetroot -cover ~/Pictures/blind_1.png
-#exec --no-startup-id hsetroot -cover ~/Pictures/Backgrounds/lego.jpg
