@@ -75,7 +75,7 @@ __default='\[\033[00m\]'
 __user_and_host='\u@\h'
 __current_dir='\w'
 __git_branch='$(__git_ps1)'
-__git_color='\[\033[01;33m\]'
+__git_color='\[\033[01;32m\]'
 
 if [ "$color_prompt" = yes ]; then
     if [[ ${EUID} == 0 ]] ; then
