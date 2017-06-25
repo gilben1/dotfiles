@@ -59,6 +59,7 @@ function set-title() {
 alias stargate='ssh -4 nickg@stargate.cat.pdx.edu'
 alias rita='ssh -4 nickg@rita.cat.pdx.edu'
 alias ruby='ssh -4 nickg@ruby.cat.pdx.edu'
+alias videocats='ssh -4 videocats@video.cat.pdx.edu'
 
 # Allows direct modification and update of the aliases file
 alias alias-modify='vim ~/.bash_aliases; source ~/.bashrc'
