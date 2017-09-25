@@ -40,10 +40,11 @@ bindsym Ctrl+$ALT+t exec i3-sensible-terminal
 bindsym Ctrl+$ALT+g exec "google-chrome"
 
 # Launch file browser
-bindsym $mod+e exec --no-startup-id "nemo"
+bindsym $mod+e exec --no-startup-id "thunar"
 
 # Launch system monitor
-bindsym $mod+grave [title="^[hH]top$"] scratchpad show, move position center
+bindsym $mod+grave [title="^[hH]top$"] scratchpad show; move position center
+bindsym $mod+F2 exec "~/.bin/scripts/check_and_run_mcecs_vpn"
 
 # Launch minecraft start script
 bindsym $mod+u exec --no-startup-id "~/.bin/scripts/minecraft"
@@ -101,6 +102,14 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+bindsym $mod+Ctrl+Right resize shrink width 1px or 1 ppt
+bindsym $mod+Ctrl+Up resize grow height 1px or 1 ppt
+bindsym $mod+Ctrl+Down resize shrink height 1px or 1 ppt
+bindsym $mod+Ctrl+Left resize grow width 1px or 1 ppt
+
+
+
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -225,7 +234,7 @@ for_window [title=" - Google Chrome"] border none
 # Automatically move calculator to scratchpad when launched
 for_window [class="calculator"] move scratchpad
 
-for_window [title="^MCECS VPN$"] move scratchpad
+for_window [title="^MCECS VPN$"] floating enable, resize set 700 100, move scratchpad
 
 
 
