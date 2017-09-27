@@ -55,6 +55,7 @@ function set-title() {
     PS1=${ORIG}${TITLE}
 }
 
+alias gephi='~/gephi-0.9.2/bin/gephi'
 
 alias stargate='ssh -4 nickg@stargate.cat.pdx.edu'
 alias rita='ssh -4 nickg@rita.cat.pdx.edu'
