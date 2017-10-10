@@ -151,5 +151,7 @@ export LANGUAGE=en_US.UTF-8
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+export CUPS_SERVER=print.cecs.pdx.edu:631
+export CUPS_USER=nickg
 
 stty -ixon
