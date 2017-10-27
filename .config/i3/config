@@ -19,7 +19,8 @@ set $ALT Mod1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono, FontAwesome 7.1
+#font pango:DejaVu Sans Mono, FontAwesome 7.1
+font pango:Hack, FontAwesome 7.1
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -71,8 +72,11 @@ bindsym $mod+l exec --no-startup-id "$HOME/.bin/scripts/lock.bash"
 bindsym $mod+shift+l exec --no-startup-id "systemctl suspend"
 
 # Increase and decrease brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# increase screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id "~/.bin/scripts/bright-up" 
+# decrease screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id "~/.bin/scripts/bright-down"
 
 # Rename current workspace
 bindsym $mod+n exec "~/.bin/scripts/rename.bash"
@@ -205,7 +209,8 @@ bar {
         #status_command i3blocks -c ~/.config/i3/i3blocks.conf
         status_command py3status -c ~/.config/i3/i3status.conf
 
-        font pango:DejaVu Sans Mono, FontAwesome 7.1
+        #font pango:DejaVu Sans Mono, FontAwesome 7.1
+        font pango:Hack, FontAwesome 7.1
 
         separator_symbol "│"
 
