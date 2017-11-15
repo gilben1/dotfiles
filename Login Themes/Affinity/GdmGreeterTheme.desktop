@@ -1,0 +1,8 @@
+[GdmGreeterTheme]
+Encoding=UTF-8
+Greeter=configuration.xml
+Name=Affinity
+Description=You turned your back on affinity... (based on Leaf Theme)
+Author=Nick
+Copyright=GPL
+Screenshot=bg.png
