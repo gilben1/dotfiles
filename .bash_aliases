@@ -40,8 +40,6 @@ alias serenity='ssh -4 nickg@serenity.cat.pdx.edu'
 #alias sirrah='ssh combscat@131.252.211.220'
 alias sirrah='ssh combscat@sirrah.kittenz'
 
-alias sirrah-nfs='sudo mount sirrah.kittenz:/home/combscat ~/sirrah'
-
 function irc()
 {
     echo "Starting up notification script"
