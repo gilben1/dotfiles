@@ -38,20 +38,26 @@ monitor = ${env:MONITOR:LVDS1}
 width = 100%
 
 ; default = 27
-height = 15
+height = 16
 ;offset-x = 700
 ;offset-y = 1%
-radius = 6.0
+;radius = 6.0
+radius-bottom = 6.0
+
 fixed-center = false
 
-background = ${colors.background}
+#background = ${colors.background}
+background-0 = #000
+background-1 = #333
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 2
 line-color = #f00
 
 ; default = 4
-border-size = 2
+border-size = 8
+border-left-size = 2
+border-right-size = 2
 border-color = #00000000
 
 ;padding-left = 0
@@ -119,19 +125,23 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %name%
 ;label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-background = ${colors.background-alt}
+;label-focused-background = ${colors.background}
+label-focused-background = 
 label-focused-underline = ${colors.green}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
-label-unfocused-background = ${colors.background-alt}
+;label-unfocused-background = ${colors.background-alt}
+label-unfocused-background-0 = #000
+label-unfocused-background-1 = #333
 label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+;label-visible-background = ${self.label-focused-background}
+label-visible-background = 
+label-visible-underline = ${colors.red}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
