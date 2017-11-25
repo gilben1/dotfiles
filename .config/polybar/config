@@ -42,13 +42,18 @@ height = 16
 ;offset-x = 700
 ;offset-y = 1%
 ;radius = 6.0
-radius-bottom = 6.0
+radius = 6.0
 
 fixed-center = false
 
 #background = ${colors.background}
-background-0 = #000
-background-1 = #333
+background-0 = ${colors.green}
+background-1 = #43832f
+background-2 = #305e22
+background-3 = #264b1b
+background-4 = #1d3814
+background-5 = #13250e
+background-6 = #0a1307
 foreground = ${colors.foreground}
 
 line-size = 2
