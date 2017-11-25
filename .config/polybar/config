@@ -27,82 +27,19 @@ purple = #875faf
 green = #5bb341
 red = #ee3333
 
-
-[bar/i3]
-
-bottom = true
-
-;override-redirect = true
-;wm-restack = i3
-
-;monitor = ${env:MONITOR:HDMI-1}
-width = 50%
-
-; default = 27
-height = 15
-;offset-x = 1%
-;offset-y = 1%
-radius = 
-fixed-center = false
-
-;background = ${colors.background}
-background =
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00
-
-; default = 4
-border-size = 2
-border-color = #00000000
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 0
-module-margin-right = 1
-
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:pixelsize=10;1
-font-2 = siji:pixelsize=10;1
-font-3 = FontAwesome:pixelsize=10;1
-
-modules-left = i3
-modules-center =
-modules-right =
-
-tray-position = right
-tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-
-
-
 [bar/main]
 
 bottom = true
 
-override-redirect = true
+;override-redirect = true
 ;wm-restack = i3
 
-;monitor = ${env:MONITOR:HDMI-1}
-width = 50%
+monitor = ${env:MONITOR:LVDS1}
+width = 100%
 
 ; default = 27
 height = 15
-offset-x = 50%
+;offset-x = 700
 ;offset-y = 1%
 radius = 6.0
 fixed-center = false
@@ -117,23 +54,26 @@ line-color = #f00
 border-size = 2
 border-color = #00000000
 
-padding-left = 0
-padding-right = 2
+;padding-left = 0
+;padding-right = 2
+padding = 1
 
-module-margin-left = 0
-module-margin-right = 1
+module-margin-left = 1
+module-margin-right = 0
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:pixelsize=10;1
 font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome:pixelsize=10;1
 
-modules-left = 
+modules-left = i3
 modules-center = 
-modules-right = filesystem xbacklight volume vpncheck wlan eth battery memory cpu temperature date
+;modules-right = filesystem xbacklight volume vpncheck wlan eth battery memory cpu temperature date
+modules-right = filesystem xbacklight volume vpnup vpndown wlan eth battery memory cpu temperature date
 
-tray-position = 
+tray-position = right
 tray-padding = 2
+;tray-detached = true
 ;tray-transparent = true
 ;tray-background = #0063ff
 
@@ -238,7 +178,7 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = ${colors.red}
 label = CPU %percentage%%
 
 ramp-coreload-0 = ▁
@@ -429,12 +369,40 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 ;exec = pgrep openvpn || echo "vpn down"
 exec = ~/.bin/scripts/vpn_polybar_check.bash
+
 interval = 5
 label = %output%
 
 format-underline = #268bd2
 ;format-prefix = " "
 format-prefix-foreground = #5b
+
+[module/vpnup]
+type = custom/script
+exec = pgrep openvpn > /dev/null && echo " vpn up"
+interval = 5
+label = %output%
+
+click-left = exec ~/.bin/scripts/check_and_run_mcecs_vpn
+
+format-underline = ${colors.green}
+;format-prefix = " "
+format-prefix-foreground = #5b
+format-foreground = ${colors.green}
+
+
+[module/vpndown]
+type = custom/script
+exec = ! pgrep openvpn > /dev/null && echo " vpn down"
+interval = 5
+label = %output%
+
+click-left = exec ~/.bin/scripts/check_and_run_mcecs_vpn
+
+format-underline = ${colors.red}
+;format-prefix = " "
+format-prefix-foreground = #5b
+format-foreground = ${colors.red}
 
 [settings]
 screenchange-reload = true
