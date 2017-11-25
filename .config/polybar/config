@@ -15,7 +15,7 @@ background-alt = #4444444
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
-secondary = #e60053
+secondary = #5bb341
 alert = #bd2c40
 
 white = #eee
@@ -28,10 +28,7 @@ green = #5bb341
 red = #ee3333
 
 
-
-
-
-[bar/example]
+[bar/i3]
 
 bottom = true
 
@@ -39,11 +36,73 @@ bottom = true
 ;wm-restack = i3
 
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
+width = 50%
 
 ; default = 27
 height = 15
 ;offset-x = 1%
+;offset-y = 1%
+radius = 
+fixed-center = false
+
+;background = ${colors.background}
+background =
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+; default = 4
+border-size = 2
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 0
+module-margin-right = 1
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:pixelsize=10;1
+font-2 = siji:pixelsize=10;1
+font-3 = FontAwesome:pixelsize=10;1
+
+modules-left = i3
+modules-center =
+modules-right =
+
+tray-position = right
+tray-padding = 2
+;tray-transparent = true
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+
+
+
+[bar/main]
+
+bottom = true
+
+override-redirect = true
+;wm-restack = i3
+
+;monitor = ${env:MONITOR:HDMI-1}
+width = 50%
+
+; default = 27
+height = 15
+offset-x = 50%
 ;offset-y = 1%
 radius = 6.0
 fixed-center = false
@@ -69,11 +128,11 @@ font-1 = unifont:pixelsize=10;1
 font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome:pixelsize=10;1
 
-modules-left = i3
-modules-center = mpd
+modules-left = 
+modules-center = 
 modules-right = filesystem xbacklight volume vpncheck wlan eth battery memory cpu temperature date powermenu
 
-tray-position = right
+tray-position = 
 tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
@@ -88,30 +147,6 @@ wm-restack = i3
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
-
-
-[module/arrow7]
-; bg to grey
-type = custom/text
-content = " "
-content-font = 2
-content-foreground = ${colors.grey}
-content-background = ${colors.background}
-
-[module/arrow8]
-; grey to bg
-type = custom/text
-content = " "
-content-font = 2
-content-foreground = ${colors.background}
-content-background = ${colors.trans}
-
-
-
-
-
-
-
 
 [module/xwindow]
 type = internal/xwindow
@@ -150,6 +185,7 @@ label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
+label-unfocused-background = ${colors.background-alt}
 label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
