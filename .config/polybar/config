@@ -130,7 +130,7 @@ font-3 = FontAwesome:pixelsize=10;1
 
 modules-left = 
 modules-center = 
-modules-right = filesystem xbacklight volume vpncheck wlan eth battery memory cpu temperature date powermenu
+modules-right = filesystem xbacklight volume vpncheck wlan eth battery memory cpu temperature date
 
 tray-position = 
 tray-padding = 2
