@@ -8,111 +8,85 @@
 ;=====================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #333333
-background-alt = #4444444
-;foreground = ${xrdb:color7:#222}
+background = #555555
+background-alt = #333333
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
 secondary = #5bb341
 alert = #bd2c40
 
+transparent = #00000000
+
 white = #eee
 grey = #444444
 pink = #d75f87
 blue = #4f97d7
 purple = #875faf
-;green = #20ad80
 green = #5bb341
+dgreen = #13250e
 red = #ee3333
 
 [bar/main]
 
 bottom = true
 
-;override-redirect = true
-;wm-restack = i3
-
 monitor = ${env:MONITOR:LVDS1}
 width = 100%
 
-; default = 27
 height = 16
-;offset-x = 700
-;offset-y = 1%
-;radius = 6.0
 radius = 6.0
 
 fixed-center = false
 
-#background = ${colors.background}
-background-0 = ${colors.green}
-background-1 = #43832f
-background-2 = #305e22
-background-3 = #264b1b
-background-4 = #1d3814
-background-5 = #13250e
-background-6 = #0a1307
 foreground = ${colors.foreground}
 
 line-size = 2
 line-color = #f00
 
-; default = 4
 border-size = 8
 border-left-size = 2
 border-right-size = 2
 border-color = #00000000
 
-;padding-left = 0
-;padding-right = 2
-padding = 1
+padding = 0
 
-module-margin-left = 1
+module-margin-left = 0
 module-margin-right = 0
 
-font-0 = fixed:pixelsize=10;1
+font-0 = Hack:pixelsize=7;1
 font-1 = unifont:pixelsize=10;1
 font-2 = siji:pixelsize=10;1
-font-3 = FontAwesome:pixelsize=10;1
+font-3 = FontAwesome:pixelsize=10;2
+font-4 = Powerline Extra Symbols:pixelsize=12;3
 
-modules-left = i3
-modules-center = 
-;modules-right = filesystem xbacklight volume vpncheck wlan eth battery memory cpu temperature date
-modules-right = filesystem xbacklight volume vpnup vpndown wlan eth battery memory cpu temperature date
+modules-left = right0 i3 right1
+modules-center =
+modules-right = left0 filesystem left1 xbacklight left2 volume left1 vpnup vpndown left2 wlan eth left1 battery left2 memory space cpu space temperature left1 date left3
 
 tray-position = right
 tray-padding = 2
-;tray-detached = true
-;tray-transparent = true
-;tray-background = #0063ff
 
-;wm-restack = bspwm
 wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+label-font = 1
+label-background = ${colors.background}
 
 [module/filesystem]
 type = internal/fs
 interval = 25
 
-mount-0 = /
-mount-1 = /home
+mount-0 = /home
 
-label-mounted = %{F#5bb341}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = "%{F#5bb341}%mountpoint%%{F-}: %percentage_used%%"
+label-mounted-font = 1
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-unmounted-font = ${self.label-mounted-font}
+label-mounted-background = ${colors.background-alt}
+label-unmounted-background = ${self.label-mounted-background}
 
 [module/i3]
 type = internal/i3
@@ -129,60 +103,39 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
-;label-focused-background = ${module/bspwm.label-focused-background}
-;label-focused-background = ${colors.background}
-label-focused-background = 
+label-focused-font = 1
+label-focused-background = ${colors.background}
 label-focused-underline = ${colors.green}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
-;label-unfocused-background = ${colors.background-alt}
-label-unfocused-background-0 = #000
-label-unfocused-background-1 = #333
-label-unfocused-padding = 1
+label-unfocused-font = ${self.label-focused-font}
+label-unfocused-background = ${colors.background-alt}
+label-unfocused-padding = ${self.label-focused-padding}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
-;label-visible-background = ${self.label-focused-background}
+label-visible-font = ${self.label-focused-font}
 label-visible-background = 
 label-visible-underline = ${colors.red}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
+label-urgent-font = ${self.label-focused-font}
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 3
+label-urgent-padding = ${self.label-focused-padding}
 
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label>
 label = BL %percentage%%
+label-font = 1
+label-background = ${colors.background}
 
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #ff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
+format = <label>
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -192,9 +145,12 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.red}
+
 label = CPU %percentage%%
+label-font = 1
+label-background = ${colors.background-alt}
+
+format-underline = ${colors.purple}
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -209,92 +165,79 @@ ramp-coreload-7 = █
 [module/memory]
 type = internal/memory
 interval = 2
-;format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+
 label = RAM %percentage_used%%
+label-font = 1
+label-background = ${colors.background-alt}
+
+format-underline = ${colors.blue}
+
 
 [module/wlan]
 type = internal/network
 interface = wlp2s0
 interval = 3.0
 
+label-connected = %essid% %signal%%
+label-connected-font = 1
+
 format-connected =  <label-connected>
 format-connected-underline = #9f78e1
-label-connected = %essid% %signal%%
+format-connected-background = ${colors.background-alt}
+
+label-disconnected = 
+label-disconnected-font = ${self.label-connected-font}
 
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = %{F#ff5900}
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+format-disconnected-foreground = ${colors.alert}
+format-disconnected-background = ${self.format-connected-background}
 
 [module/eth]
 type = internal/network
 interface = enp1s0
 interval = 3.0
 
-format-connected-underline = #55aa55
-;format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
+format-connected-underline = #55aa55
+format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-background = ${colors.background-alt}
+
 format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected-background = ${self.format-connected-background}
+format-disconnected-underline = ${self.format-connected-underline}
 
 [module/date]
 type = internal/date
 interval = 5
 
-date = " %Y-%m-%d"
+date =
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
-time-alt = %H:%M:%S
-
-format-prefix = 
-format-prefix-foreground = ${colors.foreground}
-format-underline = #0a6cf5
+time-alt = %H:%M
 
 label = %date% %time%
+label-font = 1
+label-background = ${colors.background}
+
+format-prefix = 
+format-prefix-background = ${self.label-background}
+format-underline = #0a6cf5
 
 [module/volume]
 type = internal/volume
 
-;format-volume = <label-volume> <bar-volume>
-format-volume = <label-volume>
 label-volume =  %percentage%%
-label-volume-foreground = ${root.foreground}
+label-volume-font = 1
+label-volume-background = ${colors.background-alt}
+
+format-volume = <label-volume>
 
 format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
+format-muted-background = ${self.label-volume-background}
 format-muted = muted
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -304,33 +247,45 @@ full-at = 98
 
 time-format = %H:%M
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
 label-charging = %percentage%% %time%
+label-charging-font = 1
+label-charging-background = ${colors.background}
 
-format-discharging = <ramp-capacity> <label-discharging>
+format-charging = <animation-charging><label-charging>
+format-charging-underline = #ffb52a
+
+label-discharging = ${self.label-charging}
+label-discharging-font = ${self.label-charging-font}
+label-discharging-background = ${colors.background}
+
+format-discharging = <ramp-capacity><label-discharging>
+format-discharging-background = ${colors.background}
 format-discharging-underline = ${self.format-charging-underline}
-label-discharging = %percentage%% %time%
+
+label-full = ${self.label-charging}
+label-full-font = ${self.label-charging-font}
 
 format-full-prefix= " "
-format-full-prefix-foreground = ${colors.foreground}
-format-full-underline = ${self.format-charging-underline}
+format-full-prefix-background = ${colors.background}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+format-full-foreground = ${colors.green}
+format-full-underline = ${colors.green}
 
-ramp-capacity-foreground = ${colors.foreground}
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+ramp-capacity-background = ${colors.background}
 
-animation-charging-foreground = ${colors.foreground}
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
+
+animation-charging-background = ${colors.background}
 animation-charging-framerate = 750
 
 [module/temperature]
@@ -339,64 +294,29 @@ thermal-zone = 2
 warn-temperature = 80
 
 format = <label>
-format-underline = #f50a4d
+format-background = ${colors.background-alt}
+format-underline = ${colors.red}
 format-warn = <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label = %temperature%
+label-font = 1
 label-warn = %temperature%
-label-warn-foreground = ${colors.secondary}
+label-warn-font = ${self.label-font}
+label-warn-foreground = ${colors.alert}
 
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
-[module/powermenu]
-type = custom/menu
-
-format-spacing = 1
-
-label-open = 
-;label-open= -Menu-
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
-
-[module/vpncheck]
-type = custom/script
-;exec = pgrep openvpn || echo "vpn down"
-exec = ~/.bin/scripts/vpn_polybar_check.bash
-
-interval = 5
-label = %output%
-
-format-underline = #268bd2
-;format-prefix = " "
-format-prefix-foreground = #5b
-
 [module/vpnup]
 type = custom/script
 exec = pgrep openvpn > /dev/null && echo " vpn up"
 interval = 5
 label = %output%
+label-font = 1
+format-background = ${colors.background}
 
 click-left = exec ~/.bin/scripts/check_and_run_mcecs_vpn
 
@@ -411,6 +331,8 @@ type = custom/script
 exec = ! pgrep openvpn > /dev/null && echo " vpn down"
 interval = 5
 label = %output%
+label-font = 1
+format-background = ${colors.background}
 
 click-left = exec ~/.bin/scripts/check_and_run_mcecs_vpn
 
@@ -418,6 +340,59 @@ format-underline = ${colors.red}
 ;format-prefix = " "
 format-prefix-foreground = #5b
 format-foreground = ${colors.red}
+
+[module/left0]
+type = custom/text
+content = " %{T5}%{T-}"
+content-foreground = ${colors.background-alt}
+
+[module/left1]
+type = custom/text
+content = " %{T5}%{T-}"
+content-foreground = ${colors.background}
+content-background = ${colors.background-alt}
+
+[module/left2]
+type = custom/text
+content = " %{T5}%{T-}"
+content-foreground = ${colors.background-alt}
+content-background = ${colors.background}
+
+
+[module/left3]
+type = custom/text
+content = " %{T5}%{T-}"
+content-foreground = ${colors.transparent}
+content-background = ${colors.background}
+
+
+[module/right0]
+type = custom/text
+content = "%{T5}%{T-}"
+content-foreground = ${colors.transparent}
+content-background = ${colors.background-alt}
+
+[module/right1]
+type = custom/text
+content = "%{T5}%{T-} "
+content-foreground = ${colors.background-alt}
+
+[module/right2]
+type = custom/text
+content = "%{T5}%{T-} "
+content-foreground = ${colors.background-alt}
+content-background = ${colors.background}
+
+[module/right3]
+type = custom/text
+content = "%{T5}%{T-}"
+content-foreground = ${colors.transparent}
+content-background = ${colors.background}
+
+[module/space]
+type = custom/text
+content = " "
+content-background = ${colors.background-alt}
 
 [settings]
 screenchange-reload = true
