@@ -88,6 +88,16 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h \w \$ '
 fi
 unset color_prompt force_color_prompt
+#function _update_ps1() {
+#    PS1="$(powerline-shell $?)"
+#}
+
+#if [ "$TERM" != "linux" ]; then
+#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi
+
+
+
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -156,3 +166,5 @@ export CUPS_SERVER=print.cecs.pdx.edu:631
 export CUPS_USER=nickg
 
 stty -ixon
+
+exec fish
