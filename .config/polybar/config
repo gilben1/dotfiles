@@ -185,7 +185,7 @@ format-connected =  <label-connected>
 format-connected-underline = #9f78e1
 format-connected-background = ${colors.background-alt}
 
-label-disconnected = 
+label-disconnected =  
 label-disconnected-font = ${self.label-connected-font}
 
 format-disconnected = <label-disconnected>
