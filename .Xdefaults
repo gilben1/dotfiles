@@ -28,26 +28,24 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           false
-/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-/*URxvt*font: xft:Consolas:pixelsize=12
-URxvt*boldFont: xft:Consolas:pixelsize=12
-*/
-/*
-URxvt*font: xft:Source Code Pro:pixelsize=12
-URxvt*boldFont: xft:Source Code Pro:pixelsize=12
-*/
-/*
-URxvt*font: xft:Hack:pixelsize=12
-URxvt*boldFont: xft:Hack:pixelsize=12
-*/
-URxvt*font: xft:Inconsolata:pixelsize=12
-URxvt*boldFont: xft:Inconsolata:pixelsize=12
-/*
-URxvt*font: xft:Inconsolata for Powerline:pixelsize=12
-URxvt*boldFont: xft:Inconsolata for Powerline:pixelsize=12
-*/
+
+!urxvt.font: xft:Consolas:pixelsize=12
+!urxvt.boldFont: xft:Consolas:pixelsize=12
+
+urxvt*font: xft:Source Code Pro:pixelsize=11
+urxvt*boldFont: xft:Source Code Pro:pixelsize=11
+
+!URxvt.font: xft:Hack:pixelsize=10
+!URxvt.boldFont: xft:Hack:pixelsize=10
+
+!urxvt.font: xft:Inconsolata:pixelsize=12
+!urxvt.boldFont: xft:Inconsolata:pixelsize=12
+
+!URxvt*font: xft:Inconsolata for Powerline:pixelsize=12
+!URxvt*boldFont: xft:Inconsolata for Powerline:pixelsize=12
+
 ! Fix font space
-URxvt*letterSpace: -1
+URxvt*letterSpace: -2
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt

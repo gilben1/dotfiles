@@ -47,7 +47,8 @@ line-color = #f00
 border-size = 8
 border-left-size = 2
 border-right-size = 2
-border-color = #00000000
+;border-color = #00000000
+border-color = 
 
 padding = 0
 
@@ -212,8 +213,8 @@ format-disconnected-underline = ${self.format-connected-underline}
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %Y-%m-%d"
+date = " %Y-%m-%d"
+date-alt =
 
 time = %H:%M
 time-alt = %H:%M
