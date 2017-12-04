@@ -16,7 +16,7 @@ primary = #ffb52a
 secondary = #5bb341
 alert = #bd2c40
 
-transparent = #00000000
+transparent = #00f00000
 
 white = #eee
 grey = #444444
@@ -37,6 +37,7 @@ height = 13
 
 fixed-center = true
 foreground = ${colors.foreground}
+background = ${colors.transparent}
 
 line-size = 1
 line-color = #f00
@@ -68,13 +69,14 @@ height = 16
 fixed-center = false
 
 foreground = ${colors.foreground}
+background = ${colors.transparent}
 
 line-size = 2
 line-color = #f00
 
 border-size = 4
-border-left-size = 2
-border-right-size = 2
+border-left-size = 0
+border-right-size = 0
 ;border-color = #00000000
 border-color = 
 
@@ -89,9 +91,9 @@ font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome:pixelsize=10;2
 font-4 = Powerline Extra Symbols:pixelsize=12;3
 
-modules-left = right0 i3 right1
+modules-left = i3 right1
 modules-center =
-modules-right = left0 filesystem left1 xbacklight left2 volume left1 vpnup vpndown left2 wlan eth left1 battery left2 memory left4 cpu left4 temperature left1 date left3
+modules-right = left0 filesystem left1 xbacklight left2 volume left1 vpnup vpndown left2 wlan eth left1 battery left2 memory left4 cpu left4 temperature left1 date
 
 tray-position = right
 tray-padding = 2
@@ -246,8 +248,8 @@ interval = 5
 date = " %Y-%m-%d"
 date-alt =
 
-time = %H:%M
-time-alt = %H:%M
+time = "%H:%M "
+time-alt = "%H:%M "
 
 label = %date% %time%
 label-font = 1
