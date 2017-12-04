@@ -45,7 +45,7 @@ urxvt.boldFont: xft:Source Code Pro:pixelsize=11
 !urxvt.boldFont: xft:Inconsolata for Powerline:pixelsize=12
 
 ! Fix font space
-URxvt.letterSpace: -2
+URxvt.letterSpace: -1
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
