@@ -52,9 +52,10 @@ URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
 ! Perl extensions
-URxvt.perl-ext-common:      default,matcher
+URxvt.perl-ext-common:      default,matcher,font-size
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          google-chrome
+
 
 ! Cursor
 URxvt.cursorBlink:          true
@@ -65,10 +66,14 @@ URxvt.cursorUnderline:      false
 ! Pointer
 URxvt.pointerBlank:         true
 
-!!Source http://github.com/altercation/solarized
-
 URxvt*iso14755: False
 URxvt*iso14755_52: False
+
+! Resize font keybinds
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
 
 !! Colors
 
