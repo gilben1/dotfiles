@@ -33,20 +33,20 @@ bottom = false;
 monitor = ${env:MONITOR:LVDS1}
 width = 100%
 
-height = 10
+height = 12
 
 fixed-center = true
 foreground = ${colors.foreground}
 
-line-size = 2
+line-size = 1
 line-color = #f00
 
-border-size = 0
+border-size = 3
 padding = 0
 module-margin-left = 0
 module-margin-right = 0
 
-modules-center = left0b xwindow right1b
+modules-center = left0 xwindow right1
 
 font-0 = Hack:pixelsize=7;1
 font-1 = unifont:pixelsize=10;1
@@ -103,7 +103,8 @@ type = internal/xwindow
 label = %title:10:265:...%
 label-font = 1
 label-foreground = ${colors.white}
-label-background = ${colors.dgreen}
+label-background = ${colors.background-alt}
+label-overline = ${colors.dgreen}
 
 [module/filesystem]
 type = internal/fs
@@ -211,11 +212,11 @@ interval = 3.0
 label-connected = %essid% %signal%%
 label-connected-font = 1
 
-format-connected =  <label-connected>
+format-connected =  <label-connected>
 format-connected-underline = #9f78e1
 format-connected-background = ${colors.background-alt}
 
-label-disconnected =  
+label-disconnected =  Silence of the LANs
 label-disconnected-font = ${self.label-connected-font}
 
 format-disconnected = <label-disconnected>
@@ -373,12 +374,6 @@ type = custom/text
 content = " %{T5}%{T-}"
 content-foreground = ${colors.background-alt}
 
-
-[module/left0b]
-type = custom/text
-content = " %{T5}%{T-}"
-content-foreground = ${colors.dgreen}
-
 [module/left1]
 type = custom/text
 content = " %{T5}%{T-}"
@@ -414,11 +409,6 @@ content-background = ${colors.background-alt}
 type = custom/text
 content = "%{T5}%{T-} "
 content-foreground = ${colors.background-alt}
-
-[module/right1b]
-type = custom/text
-content = "%{T5}%{T-} "
-content-foreground = ${colors.dgreen}
 
 [module/right2]
 type = custom/text
