@@ -33,7 +33,7 @@ bottom = false;
 monitor = ${env:MONITOR:LVDS1}
 width = 100%
 
-height = 12
+height = 13
 
 fixed-center = true
 foreground = ${colors.foreground}
@@ -46,12 +46,12 @@ padding = 0
 module-margin-left = 0
 module-margin-right = 0
 
-modules-center = left0 xwindow right1
+modules-center = left0b xwindow right1b
 
-font-0 = Hack:pixelsize=7;1
+font-0 = Hack:pixelsize=7;2
 font-1 = unifont:pixelsize=10;1
 font-2 = siji:pixelsize=10;1
-font-3 = FontAwesome:pixelsize=10;2
+font-3 = FontAwesome:pixelsize=7;2
 font-4 = Powerline Extra Symbols:pixelsize=12;3
 
 
@@ -100,10 +100,10 @@ wm-restack = i3
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:10:265:...%
+label = "%{T4}%{T-} %title:0:260:...% %{T4}%{T-}"
 label-font = 1
 label-foreground = ${colors.white}
-label-background = ${colors.background-alt}
+label-background = ${colors.background}
 label-overline = ${colors.dgreen}
 
 [module/filesystem]
@@ -374,6 +374,11 @@ type = custom/text
 content = " %{T5}%{T-}"
 content-foreground = ${colors.background-alt}
 
+[module/left0b]
+type = custom/text
+content = " %{T5}%{T-}"
+content-foreground = ${colors.background}
+
 [module/left1]
 type = custom/text
 content = " %{T5}%{T-}"
@@ -409,6 +414,11 @@ content-background = ${colors.background-alt}
 type = custom/text
 content = "%{T5}%{T-} "
 content-foreground = ${colors.background-alt}
+
+[module/right1b]
+type = custom/text
+content = "%{T5}%{T-} "
+content-foreground = ${colors.background}
 
 [module/right2]
 type = custom/text
