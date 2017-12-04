@@ -167,4 +167,4 @@ export CUPS_USER=nickg
 
 stty -ixon
 
-exec fish
+#exec fish "$@"
