@@ -16,38 +16,32 @@ lgrey = #555555
 pink = #d75f87
 purple = #875faf
 
-green_l = #aae598
-green_ml = #81d168
 green = ${xrdb:color2:#FFF}
-green_md = #409923
-green_d = #27790c
 
-blue_l = #80c1b4
-blue_ml = #4e9e8e
 blue = ${xrdb:color12:#FFF}
-blue_md = #1b7362
-blue_d = #095b4b
 
-yellow_l = #e0f6a3
-yellow_ml = #cae974
 yellow = #a5c847
-yellow_md = #88ab27
-yellow_d = #67870e
 
-palette_1 = ${xrdb:color2:#FFF}
-palette_2 = ${xrdb:color10:#FFF}
-palette_3 = ${xrdb:color12:#FFF}
-palette_4 = #03060b
+palette_1 = ${xrdb:color1:#FFF}
+palette_9 = ${xrdb:color9:#FFF}
+palette_2 = ${xrdb:color2:#FFF}
+palette_10 = ${xrdb:color10:#FFF}
+palette_3 = ${xrdb:color3:#FFF}
+palette_11 = ${xrdb:color11:#FFF}
+palette_4 = ${xrdb:color4:#FFF}
+palette_12 = ${xrdb:color12:#FFF}
+
+
 
 dgreen = ${colors.green}
-;red = #ee3333
-red = ${xrdb:color1:#FFF}
+red = #ee3333
+;red = ${xrdb:color1:#FFF}
 red_d = #880e1f
 lred = #bd2c40
 orange = #ffb52a
 
-background = ${colors.dgrey}
-background-alt = ${colors.dgrey}
+background = ${xrdb:color0}
+background-alt = ${xrdb:color0}
 foreground = ${colors.white}
 foreground-alt = ${colors.lgrey}
 primary = ${colors.orange}
@@ -56,17 +50,17 @@ alert = ${colors.lred}
 
 transparent = #00f00000
 
-color0 = ${colors.palette_1}
-color1 = ${colors.palette_1}
-color2 = ${colors.palette_2}
-color3 = ${colors.palette_1}
-color4 = ${colors.palette_1}
-color5 = ${colors.palette_1}
-color6 = ${colors.palette_1}
-color7 = ${colors.palette_2}
-color8 = ${colors.palette_1}
-color9 = ${colors.palette_1}
-color_end = ${colors.palette_1}
+color0 = ${colors.palette_2}
+color1 = ${colors.palette_10}
+color2 = ${colors.palette_3}
+color3 = ${colors.palette_11}
+color4 = ${colors.palette_4}
+color5 = ${colors.palette_12}
+color6 = ${colors.palette_3}
+color7 = ${colors.palette_11}
+color8 = ${colors.palette_2}
+color9 = ${colors.palette_10}
+color_end = ${colors.palette_2}
 
 
 [bar/top]
@@ -89,6 +83,7 @@ padding = 0
 module-margin-left = 0
 module-margin-right = 0
 
+;modules-left = color0-block color1-block color2-block color3-block color4-block color5-block color6-block color7-block color8-block color9-block color10-block color11-block color12-block color13-block color14-block color15-block
 modules-center = space-end space xwindow space space-end
 
 font-0 = Hack:pixelsize=7;2
@@ -494,6 +489,86 @@ content-background = ${colors.background}
 type = custom/text
 content = " "
 content-background = ${colors.color_end}
+
+[module/color0-block]
+type = custom/text
+content = " 0 "
+content-background = ${xrdb:color0}
+
+[module/color1-block]
+type = custom/text
+content = " 1 "
+content-background = ${xrdb:color1}
+
+[module/color2-block]
+type = custom/text
+content = " 2 "
+content-background = ${xrdb:color2}
+
+[module/color3-block]
+type = custom/text
+content = " 3 "
+content-background = ${xrdb:color3}
+
+[module/color4-block]
+type = custom/text
+content = " 4 "
+content-background = ${xrdb:color4}
+
+[module/color5-block]
+type = custom/text
+content = " 5 "
+content-background = ${xrdb:color5}
+
+[module/color6-block]
+type = custom/text
+content = " 6 "
+content-background = ${xrdb:color6}
+
+[module/color7-block]
+type = custom/text
+content = " 7 "
+content-background = ${xrdb:color7}
+
+[module/color8-block]
+type = custom/text
+content = " 8 "
+content-background = ${xrdb:color8}
+
+[module/color9-block]
+type = custom/text
+content = " 9 "
+content-background = ${xrdb:color9}
+
+[module/color10-block]
+type = custom/text
+content = " 10 "
+content-background = ${xrdb:color10}
+
+[module/color11-block]
+type = custom/text
+content = " 11 "
+content-background = ${xrdb:color11}
+
+[module/color12-block]
+type = custom/text
+content = " 12 "
+content-background = ${xrdb:color12}
+
+[module/color13-block]
+type = custom/text
+content = " 13 "
+content-background = ${xrdb:color13}
+
+[module/color14-block]
+type = custom/text
+content = " 14 "
+content-background = ${xrdb:color14}
+
+[module/color15-block]
+type = custom/text
+content = " 15 "
+content-background = ${xrdb:color15}
 
 [settings]
 screenchange-reload = true

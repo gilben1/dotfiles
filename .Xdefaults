@@ -77,7 +77,7 @@ URxvt.keysym.C-slash:  font-size:show
 
 !! Colors
 
-*background: #333333
+URxvt*background: #333333
 !*background: #002b36
 *foreground: #FFFFFF
 !*foreground: #657b83
