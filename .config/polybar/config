@@ -21,8 +21,8 @@ red = #ee3333
 lred = #bd2c40
 orange = #ffb52a
 
-background = ${colors.lgrey}
-background-alt = ${colors.lgrey}
+background = ${colors.dgrey}
+background-alt = ${colors.dgrey}
 foreground = ${colors.white}
 foreground-alt = ${colors.lgrey}
 primary = ${colors.orange}
