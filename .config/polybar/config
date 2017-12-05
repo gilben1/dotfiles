@@ -39,7 +39,8 @@ palette_3 = #27a679
 palette_4 = #03060b
 
 dgreen = ${colors.green}
-red = #ee3333
+;red = #ee3333
+red = #b60205
 red_d = #880e1f
 lred = #bd2c40
 orange = #ffb52a
@@ -262,8 +263,8 @@ label-disconnected =  Silence of the LANs
 label-disconnected-font = ${self.label-connected-font}
 
 format-disconnected = <label-disconnected>
-format-disconnected-underline = ${self.format-connected-underline}
-format-disconnected-foreground = ${colors.red_d}
+format-disconnected-underline = ${colors.red}
+format-disconnected-foreground = ${colors.red}
 format-disconnected-background = ${self.format-connected-background}
 
 [module/eth]
