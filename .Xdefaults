@@ -59,7 +59,7 @@ URxvt.urlLauncher:          google-chrome
 
 ! Cursor
 URxvt.cursorBlink:          true
-#URxvt.cursorColor:          #657b83
+! URxvt.cursorColor:          #657b83
 URxvt.cursorColor:          #FFFFFF
 URxvt.cursorUnderline:      false
 
@@ -88,33 +88,33 @@ URxvt.keysym.C-slash:  font-size:show
 *pointerColorForeground: #93a1a1
 
 !! black dark/light
-*color0: #000000
-*color8: #4C4C4C
+*.color0: #000000
+*.color8: #4C4C4C
 
 !! red dark/light
-*color1: #CD0000
-*color9: #FF0000
+*.color1: #CD0000
+*.color9: #FF0000
 
 !! green dark/light
-*color2: #00CD00
-*color10: #00FF00
+*.color2: #00CD00
+*.color10: #00FF00
 
 !! yellow dark/light
-*color3: #CDCD00
-*color11: #FFFF00
+*.color3: #CDCD00
+*.color11: #FFFF00
 
 !! blue dark/light
-*color4: #1E90FF
-*color12: #4682B4
+*.color4: #1E90FF
+*.color12: #4682B4
 
 !! magenta dark/light
-*color5: #CD00CD
-*color13: #FF0808
+*.color5: #CD00CD
+*.color13: #FF0808
 
 !! cyan dark/light
-*color6: #00CDCD
-*color14: #569E9E
+*.color6: #00CDCD
+*.color14: #569E9E
 
 !! white dark/light
-*color7: #E5E5E5
-*color15: #FFFFFF
+*.color7: #E5E5E5
+*.color15: #FFFFFF
