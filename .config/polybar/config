@@ -33,6 +33,11 @@ yellow = #a5c847
 yellow_md = #88ab27
 yellow_d = #67870e
 
+palette_1 = #57991c
+palette_2 = #9de4bc
+palette_3 = #27a679
+palette_4 = #03060b
+
 dgreen = ${colors.green}
 red = #ee3333
 red_d = #880e1f
@@ -49,16 +54,16 @@ alert = ${colors.lred}
 
 transparent = #00f00000
 
-color0 = ${colors.green_md}
-color1 = ${colors.green_d}
-color2 = ${colors.blue_d}
-color3 = ${colors.blue_md}
-color4 = ${colors.blue}
-color5 = ${colors.blue_ml}
-color6 = ${colors.blue_l}
-color7 = ${colors.yellow_ml}
-color8 = ${colors.green_l}
-color9 = ${colors.green_ml}
+color0 = ${colors.palette_3}
+color1 = ${colors.palette_3}
+color2 = ${colors.palette_2}
+color3 = ${colors.palette_1}
+color4 = ${colors.palette_1}
+color5 = ${colors.palette_1}
+color6 = ${colors.palette_1}
+color7 = ${colors.palette_2}
+color8 = ${colors.palette_3}
+color9 = ${colors.palette_3}
 
 
 [bar/top]
@@ -138,7 +143,7 @@ label = "%title:0:260:...%"
 label-font = 1
 label-foreground = ${colors.white}
 label-background = ${colors.background}
-label-overline = ${colors.dgreen}
+label-overline = ${colors.palette_3}
 
 [module/filesystem]
 type = internal/fs
@@ -172,7 +177,7 @@ label-mode-background = ${colors.primary}
 label-focused = %name%
 label-focused-font = 1
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.green}
+label-focused-underline = ${colors.palette_3}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
@@ -340,8 +345,8 @@ label-full-background = ${colors.background}
 format-full-prefix= " "
 format-full-prefix-background = ${colors.background}
 
-format-full-foreground = ${colors.green}
-format-full-underline = ${colors.green}
+format-full-foreground = ${colors.color5}
+format-full-underline = ${colors.color5}
 
 ramp-capacity-0 = " "
 ramp-capacity-1 = " "
@@ -485,7 +490,7 @@ content-background = ${colors.background}
 [module/space-end]
 type = custom/text
 content = " "
-content-background = ${colors.green}
+content-background = ${colors.palette_3}
 
 [settings]
 screenchange-reload = true

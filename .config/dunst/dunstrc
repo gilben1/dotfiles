@@ -31,7 +31,7 @@ max_icon_size = 24
 
 [frame]
 width = 1
-color = "#5bb341"
+color = "#27a679"
 
 [shortcuts]
 close = ctrl+space
