@@ -225,7 +225,7 @@ label-disconnected-font = ${self.label-connected-font}
 
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
-format-disconnected-foreground = ${colors.alert}
+format-disconnected-foreground = ${colors.red}
 format-disconnected-background = ${self.format-connected-background}
 
 [module/eth]
