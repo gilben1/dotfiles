@@ -1,0 +1,31 @@
+*color0: #000000
+*color8: #333333
+
+!! red dark/light
+*color1: #b60205
+*color9: #FF0000
+
+!! green dark/light
+!*color2: #57991c
+*color2: #23B074
+*color10: #84F4BC
+
+!! yellow dark/light
+*color3: #CDCD00
+*color11: #FFFF00
+
+!! blue dark/light
+*color4: #1E90FF
+*color12: #308776
+
+!! magenta dark/light
+*color5: #CD00CD
+*color13: #FF0808
+
+!! cyan dark/light
+*color6: #00CDCD
+*color14: #569E9E
+
+!! white dark/light
+*color7: #E5E5E5
+*color15: #FFFFFF

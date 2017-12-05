@@ -88,32 +88,32 @@ URxvt.keysym.C-slash:  font-size:show
 *pointerColorForeground: #93a1a1
 
 !! black dark/light
-*.color0: #000000
-*.color8: #4C4C4C
+URxvt.color0: #000000
+URxvt.color8: #4C4C4C
 
 !! red dark/light
-*.color1: #CD0000
-*.color9: #FF0000
+URxvt.color1: #CD0000
+URxvt.color9: #FF0000
 
 !! green dark/light
-*.color2: #00CD00
-*.color10: #00FF00
+URxvt.color2: #00CD00
+URxvt.color10: #00FF00
 
 !! yellow dark/light
-*.color3: #CDCD00
-*.color11: #FFFF00
+URxvt.color3: #CDCD00
+URxvt.color11: #FFFF00
 
 !! blue dark/light
-*.color4: #1E90FF
-*.color12: #4682B4
+URxvt.color4: #1E90FF
+URxvt.color12: #4682B4
 
 !! magenta dark/light
-*.color5: #CD00CD
-*.color13: #FF0808
+URxvt.color5: #CD00CD
+URxvt.color13: #FF0808
 
 !! cyan dark/light
-*.color6: #00CDCD
-*.color14: #569E9E
+URxvt.color6: #00CDCD
+URxvt.color14: #569E9E
 
 !! white dark/light
 *.color7: #E5E5E5

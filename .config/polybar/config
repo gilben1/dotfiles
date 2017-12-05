@@ -9,7 +9,8 @@
 
 [colors]
 white = #fff
-dgrey = #333333
+#dgrey = #333333
+dgrey = ${xrdb:color8:#FFF}
 grey = #444444
 lgrey = #555555
 pink = #d75f87
@@ -17,13 +18,13 @@ purple = #875faf
 
 green_l = #aae598
 green_ml = #81d168
-green = #5bb340
+green = ${xrdb:color2:#FFF}
 green_md = #409923
 green_d = #27790c
 
 blue_l = #80c1b4
 blue_ml = #4e9e8e
-blue = #308776
+blue = ${xrdb:color12:#FFF}
 blue_md = #1b7362
 blue_d = #095b4b
 
@@ -33,14 +34,14 @@ yellow = #a5c847
 yellow_md = #88ab27
 yellow_d = #67870e
 
-palette_1 = #57991c
-palette_2 = #9de4bc
-palette_3 = #27a679
+palette_1 = ${xrdb:color2:#FFF}
+palette_2 = ${xrdb:color10:#FFF}
+palette_3 = ${xrdb:color12:#FFF}
 palette_4 = #03060b
 
 dgreen = ${colors.green}
 ;red = #ee3333
-red = #b60205
+red = ${xrdb:color1:#FFF}
 red_d = #880e1f
 lred = #bd2c40
 orange = #ffb52a
@@ -55,16 +56,17 @@ alert = ${colors.lred}
 
 transparent = #00f00000
 
-color0 = ${colors.palette_3}
-color1 = ${colors.palette_3}
+color0 = ${colors.palette_1}
+color1 = ${colors.palette_1}
 color2 = ${colors.palette_2}
 color3 = ${colors.palette_1}
 color4 = ${colors.palette_1}
 color5 = ${colors.palette_1}
 color6 = ${colors.palette_1}
 color7 = ${colors.palette_2}
-color8 = ${colors.palette_3}
-color9 = ${colors.palette_3}
+color8 = ${colors.palette_1}
+color9 = ${colors.palette_1}
+color_end = ${colors.palette_1}
 
 
 [bar/top]
@@ -144,7 +146,7 @@ label = "%title:0:260:...%"
 label-font = 1
 label-foreground = ${colors.white}
 label-background = ${colors.background}
-label-overline = ${colors.palette_3}
+label-overline = ${colors.color_end}
 
 [module/filesystem]
 type = internal/fs
@@ -178,7 +180,7 @@ label-mode-background = ${colors.primary}
 label-focused = %name%
 label-focused-font = 1
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.palette_3}
+label-focused-underline = ${colors.color_end}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
@@ -491,7 +493,7 @@ content-background = ${colors.background}
 [module/space-end]
 type = custom/text
 content = " "
-content-background = ${colors.palette_3}
+content-background = ${colors.color_end}
 
 [settings]
 screenchange-reload = true

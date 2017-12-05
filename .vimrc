@@ -58,3 +58,4 @@ let mapleader=","
 
 " Clears hlsearch with ,<space>
 nnoremap <leader><space> :nohlsearch<CR>
+set title
