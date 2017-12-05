@@ -10,7 +10,7 @@
 
 <!--Clock -->
 <item type="label" id="clock">
-    <normal color="#638f2e" font="Inconsolata 9"/>
+    <normal color="#ffffff" font="Source Code Pro 9"/>
     <pos anchor="e" x="92.75%" y="83.25%" />
     <text>%c</text>
 </item>
@@ -20,9 +20,9 @@
     <pos x="7.25%" y="83.25%" anchor="c"/>
     <box orientation="horizontal">
         <item type="label" id="hostname">
-            <normal color="#DADADA" font="Inconsolata 9"/>
-            <prelight color="#efefef" font="Inconsolata 9"/>
-            <active color="#333333" font="Inconsolata 9"/>
+            <normal color="#DADADA" font="Source Code Pro 9"/>
+            <prelight color="#efefef" font="Source Code Pro 9"/>
+            <active color="#333333" font="Source Code Pro 9"/>
             <pos y="50%" anchor="w"/>
             <text>%h</text>
         </item>
@@ -35,7 +35,7 @@
     <pos anchor="c" x="50%" y="10%" width="box" height="box"/>
     <box orientation="vertical" min-width="400" xpadding="10" ypadding="5" spacing="0">
         <item type="label" id="timed-label">
-            <normal color="#ffffff" font="Inconsolata 12"/>
+            <normal color="#ffffff" font="Source Code Pro 12"/>
             <pos x="50%" anchor="n"/>
             <!-- Stock label for: User %s will login in %d seconds -->
             <stock type="timed-label"/>
@@ -51,7 +51,7 @@
 
         <item type="label">
             <pos anchor="c" x="50%" y="45%"/>
-            <normal color="#999999" font="Inconsolata 22"/>
+            <normal color="#999999" font="Source Code Pro 22"/>
             <!-- Stock label for: Welcome to %h-->
             <text></text>
         </item>
@@ -61,9 +61,9 @@
             <pos x="-96.5%" y="990%" anchor="c" width="box" height="box"/>
             <box orientation="horizontal">
                 <item type="label" id="hostname">
-                    <normal color="#DADADA" font="Inconsolata 9"/>
-                    <prelight color="#efefef" font="Inconsolata 9"/>
-                    <active color="#333333" font="Inconsolata 9"/>
+                    <normal color="#DADADA" font="Source Code Pro 9"/>
+                    <prelight color="#efefef" font="Source Code Pro 9"/>
+                    <active color="#333333" font="Source Code Pro 9"/>
                     <pos y="50%" anchor="w"/>
                     <text>%h</text>
                 </item>
@@ -72,7 +72,7 @@
 
         <item type="label" id="pam-prompt">
             <pos anchor="n" x="50%" y="50%" />
-            <normal color="#DADADA" font="Inconsolata 10"/>
+            <normal color="#DADADA" font="Source Code Pro 10"/>
             <!-- Stock label for: Username: -->
             <stock type="username-label"/>
         </item>
@@ -82,7 +82,7 @@
             <pos anchor="n" x="50%" height="18" width="40%"/>
             <fixed>
                 <item type="entry" id="user-pw-entry">
-                    <normal color="#000000" font="Inconsolata 10"/>
+                    <normal color="#000000" font="Source Code Pro 10"/>
                     <pos anchor="nw" x="1" y="1" height="-2" width="-2"/>
                 </item>
             </fixed>
@@ -93,7 +93,7 @@
             <pos anchor="c" x="50%" y="425%" width="box" height="box"/>
             <box orientation="vertical" min-width="380" xpadding="10" ypadding="0" spacing="0">
                 <item type="label">
-                    <normal color="#DADADA" font="Inconsolata 10"/>
+                    <normal color="#DADADA" font="Source Code Pro 10"/>
                     <pos x="50%" anchor="n"/>
                     <!-- Stock label for: You've got capslock on! -->
                     <stock type="caps-lock-warning"/>
@@ -114,9 +114,9 @@
                     <pos y="-40" anchor="w" width="box" height="box"/>
                     <box orientation="horizontal">
                         <item type="label">
-                            <normal color="#DADADA" font="Inconsolata 9"/>
-                            <prelight color="#FFFFFF" font="Inconsolata  9"/>
-                            <active color="#DADADA" font="Inconsolata 9"/>
+                            <normal color="#DADADA" font="Source Code Pro 9"/>
+                            <prelight color="#FFFFFF" font="Source Code Pro  9"/>
+                            <active color="#DADADA" font="Source Code Pro 9"/>
                             <pos y="50%" anchor="w"/>
                             <!-- Stock label for: _Session -->
                             <stock type="language"/>
@@ -129,9 +129,9 @@
                     <pos y="-40" anchor="w" width="box" height="box"/>
                     <box orientation="horizontal">
                         <item type="label">
-                            <normal color="#DADADA" font="Inconsolata 9"/>
-                            <prelight color="#FFFFFF" font="Inconsolata 9"/>
-                            <active color="#DADADA" font="Inconsolata 9"/>
+                            <normal color="#DADADA" font="Source Code Pro 9"/>
+                            <prelight color="#FFFFFF" font="Source Code Pro 9"/>
+                            <active color="#DADADA" font="Source Code Pro 9"/>
                             <pos y="50%" anchor="w"/>
                             <!-- Stock label for: _Session -->
                             <stock type="session"/>
@@ -145,9 +145,9 @@
                     <pos y="-40" anchor="w" width="box" height="box"/>
                     <box orientation="horizontal">
                         <item type="label">
-                            <normal color="#DADADA" font="Inconsolata 9"/>
-                            <prelight color="#FFFFFF" font="Inconsolata 9"/>
-                            <active color="#DADADA" font="Inconsolata 9"/>
+                            <normal color="#DADADA" font="Source Code Pro 9"/>
+                            <prelight color="#FFFFFF" font="Source Code Pro 9"/>
+                            <active color="#DADADA" font="Source Code Pro 9"/>
                             <pos y="50%" anchor="w"/>
                             <!-- Stock label for: _Actions -->
                             <stock type="system"/>
@@ -161,9 +161,9 @@
                     <pos y="-40" anchor="w" width="box" height="box"/>
                     <box orientation="horizontal">
                         <item type="label">
-                            <normal color="#DADADA" font="Inconsolata 9"/>
-                            <prelight color="#FFFFFF" font="Inconsolata 9"/>
-                            <active color="#DADADA" font="Inconsolata 9"/>
+                            <normal color="#DADADA" font="Source Code Pro 9"/>
+                            <prelight color="#FFFFFF" font="Source Code Pro 9"/>
+                            <active color="#DADADA" font="Source Code Pro 9"/>
                             <pos y="50%" anchor="w"/>
                             <!-- Stock label for: D_isconnect -->
                             <stock type="disconnect"/>
@@ -171,9 +171,9 @@
                         </item>
 
                         <item type="label">
-                            <normal color="#DADADA" font="Inconsolata 9"/>
-                            <prelight color="#FFFFFF" font="Inconsolata 9"/>
-                            <active color="#DADADA" font="Inconsolata 9"/>
+                            <normal color="#DADADA" font="Source Code Pro 9"/>
+                            <prelight color="#FFFFFF" font="Source Code Pro 9"/>
+                            <active color="#DADADA" font="Source Code Pro 9"/>
                             <pos y="50%" anchor="w"/>
                             <!-- Stock label for: _Quit -->
                             <stock type="quit"/>
@@ -191,7 +191,7 @@
     <fixed>
         <item type="label" id="pam-error">
             <pos anchor="c" x="5%" y="-99%"/>
-            <normal color="#FFFFFF" font="Inconsolata 10"/>
+            <normal color="#FFFFFF" font="Source Code Pro 10"/>
             <text></text>
         </item>
     </fixed>

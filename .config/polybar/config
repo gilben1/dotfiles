@@ -13,11 +13,29 @@ dgrey = #333333
 grey = #444444
 lgrey = #555555
 pink = #d75f87
-blue = #4f97d7
 purple = #875faf
-green = #5bb341
+
+green_l = #aae598
+green_ml = #81d168
+green = #5bb340
+green_md = #409923
+green_d = #27790c
+
+blue_l = #80c1b4
+blue_ml = #4e9e8e
+blue = #308776
+blue_md = #1b7362
+blue_d = #095b4b
+
+yellow_l = #e0f6a3
+yellow_ml = #cae974
+yellow = #a5c847
+yellow_md = #88ab27
+yellow_d = #67870e
+
 dgreen = ${colors.green}
 red = #ee3333
+red_d = #880e1f
 lred = #bd2c40
 orange = #ffb52a
 
@@ -30,6 +48,18 @@ secondary = ${colors.green}
 alert = ${colors.lred}
 
 transparent = #00f00000
+
+color0 = ${colors.green_md}
+color1 = ${colors.green_d}
+color2 = ${colors.blue_d}
+color3 = ${colors.blue_md}
+color4 = ${colors.blue}
+color5 = ${colors.blue_ml}
+color6 = ${colors.blue_l}
+color7 = ${colors.yellow_ml}
+color8 = ${colors.green_l}
+color9 = ${colors.green_ml}
+
 
 [bar/top]
 
@@ -81,7 +111,7 @@ border-size = 0
 ;border-color = #00000000
 border-color =
 
-padding = 0
+padding = 2
 
 module-margin-left = 0
 module-margin-right = 0
@@ -92,10 +122,10 @@ font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome:pixelsize=10;2
 font-4 = Powerline Extra Symbols:pixelsize=14;3
 
-modules-left = space-alt i3 space-alt space-end
+modules-left = space-end space-alt i3 space-alt space-end
 modules-center =
-;modules-right = left0 filesystem left1 xbacklight left2 volume left1 vpnup vpndown left2 wlan eth left1 battery left2 memory left4 cpu left4 temperature left1 date
-modules-right = space-end space-alt filesystem space xbacklight space volume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt
+modules-right = space-end space-alt filesystem space xbacklight space volume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt space-end
+;modules-right = space-alt filesystem space xbacklight space volume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt
 
 tray-position = right
 tray-padding = 2
@@ -116,12 +146,14 @@ interval = 25
 
 mount-0 = /home
 
-label-mounted = "%{F#5bb341}%mountpoint%%{F-}: %percentage_used%%"
+label-mounted = "%{F#81d168}%mountpoint%%{F-}: %percentage_used%%"
 label-mounted-font = 1
 label-unmounted = %mountpoint% not mounted
 label-unmounted-font = ${self.label-mounted-font}
 label-mounted-background = ${colors.background-alt}
 label-unmounted-background = ${self.label-mounted-background}
+
+label-mounted-underline = ${colors.color0}
 
 [module/i3]
 type = internal/i3
@@ -171,6 +203,7 @@ label-font = 1
 label-background = ${colors.background}
 
 format = <label>
+format-underline = ${colors.color1}
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -185,7 +218,7 @@ label = CPU %percentage%%
 label-font = 1
 label-background = ${colors.background-alt}
 
-format-underline = ${colors.purple}
+format-underline = ${colors.color7}
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -205,7 +238,7 @@ label = RAM %percentage_used%%
 label-font = 1
 label-background = ${colors.background-alt}
 
-format-underline = ${colors.blue}
+format-underline = ${colors.color5}
 
 
 [module/wlan]
@@ -217,7 +250,7 @@ label-connected = %essid% %signal%%
 label-connected-font = 1
 
 format-connected =  <label-connected>
-format-connected-underline = #9f78e1
+format-connected-underline = ${colors.color4}
 format-connected-background = ${colors.background-alt}
 
 label-disconnected =  Silence of the LANs
@@ -225,7 +258,7 @@ label-disconnected-font = ${self.label-connected-font}
 
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
-format-disconnected-foreground = ${colors.red}
+format-disconnected-foreground = ${colors.red_d}
 format-disconnected-background = ${self.format-connected-background}
 
 [module/eth]
@@ -235,7 +268,7 @@ interval = 3.0
 
 label-connected = %local_ip%
 
-format-connected-underline = #55aa55
+format-connected-underline = ${colors.color4}
 format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected-background = ${colors.background-alt}
 
@@ -259,7 +292,7 @@ label-background = ${colors.background}
 
 format-prefix = 
 format-prefix-background = ${self.label-background}
-format-underline = #0a6cf5
+format-underline = ${colors.color9}
 
 [module/volume]
 type = internal/volume
@@ -269,10 +302,13 @@ label-volume-font = 1
 label-volume-background = ${colors.background-alt}
 
 format-volume = <label-volume>
+format-volume-underline = ${colors.color2}
 
 format-muted-prefix = " "
 format-muted-background = ${self.label-volume-background}
 format-muted = muted
+
+format-muted-underline = ${colors.color2}
 
 [module/battery]
 type = internal/battery
@@ -287,7 +323,7 @@ label-charging-font = 1
 label-charging-background = ${colors.background}
 
 format-charging = <animation-charging><label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = ${colors.color5}
 
 label-discharging = %percentage%% %time%
 label-discharging-font = ${self.label-charging-font}
@@ -331,9 +367,9 @@ warn-temperature = 80
 
 format = <label>
 format-background = ${colors.background-alt}
-format-underline = ${colors.red}
+format-underline = ${colors.color8}
 format-warn = <label-warn>
-format-warn-underline = ${self.format-underline}
+format-warn-underline = ${colors.red_d}
 
 label = %temperature%
 label-font = 1
@@ -356,8 +392,8 @@ format-background = ${colors.background}
 
 click-left = exec ~/.bin/scripts/check_and_run_mcecs_vpn
 
-format-underline = ${colors.green}
-format-foreground = ${colors.green}
+format-underline = ${colors.color3}
+format-foreground = ${colors.color3}
 
 
 [module/vpndown]
