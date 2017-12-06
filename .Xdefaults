@@ -104,7 +104,8 @@ URxvt.color3: #CDCD00
 URxvt.color11: #FFFF00
 
 !! blue dark/light
-URxvt.color4: #1E90FF
+!URxvt.color4: #1E90FF
+URxvt.color4: #1882db
 URxvt.color12: #4682B4
 
 !! magenta dark/light

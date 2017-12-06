@@ -59,3 +59,4 @@ let mapleader=","
 " Clears hlsearch with ,<space>
 nnoremap <leader><space> :nohlsearch<CR>
 set title
+colorscheme 0x7A69_dark
