@@ -149,7 +149,7 @@ interval = 25
 
 mount-0 = /home
 
-label-mounted = "%{F#81d168}%mountpoint%%{F-}: %percentage_used%%"
+label-mounted = "%{A1:xdg-open /home/$USER:}%mountpoint%: %percentage_used%%%{A}"
 label-mounted-font = 1
 label-unmounted = %mountpoint% not mounted
 label-unmounted-font = ${self.label-mounted-font}
@@ -252,7 +252,7 @@ interval = 3.0
 label-connected = %essid% %signal%%
 label-connected-font = 1
 
-format-connected =  <label-connected>
+format-connected = "%{A3:nm-connection-editor:} <label-connected>%{A}"
 format-connected-underline = ${colors.color4}
 format-connected-background = ${colors.background-alt}
 
@@ -284,12 +284,10 @@ type = internal/date
 interval = 5
 
 date = " %Y-%m-%d"
-date-alt =
 
 time = "%H:%M"
-time-alt = "%H:%M"
 
-label = %date% %time%
+label = "%{A1:gsimplecal:}%date% %time%%{A}"
 label-font = 1
 label-background = ${colors.background}
 
