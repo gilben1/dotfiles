@@ -131,7 +131,7 @@ modules-right = space-end space-alt filesystem space xbacklight space volume spa
 ;modules-right = space-alt filesystem space xbacklight space volume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt
 
 tray-position = right
-tray-padding = 2
+tray-padding = 0
 
 wm-restack = i3
 
