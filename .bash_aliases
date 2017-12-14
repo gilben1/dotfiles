@@ -71,7 +71,7 @@ alias alias-view='less ~/.bash_aliases'
 
 
 # Fixing stuff
-alias remount='sudo mount -a';
+alias remount='sudo mount -a'
 alias fix-wifi='sudo service network-manager restart && echo "Restarted network manager"'
 alias wifi-restart='sudo service network-manager restart && echo "Restarted network manager"'
 alias fix-gdrive='google-drive-ocamlfuse -cc'
