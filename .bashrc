@@ -168,3 +168,4 @@ export CUPS_USER=nickg
 stty -ixon
 
 #exec fish "$@"
+(wal -r &)
