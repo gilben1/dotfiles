@@ -31,7 +31,7 @@ max_icon_size = 24
 
 [frame]
 width = 1
-color = "#27a679"
+#color = "${color2:-#F0F0F0}"
 
 [shortcuts]
 close = ctrl+space
@@ -40,16 +40,16 @@ history = ctrl+grave
 context = ctrl+shift+period
 
 [urgency_low]
-background = "#181818"
-foreground = "#FFFFFF"
+#background = "#181818"
+#foreground = "#FFFFFF"
 timeout = 5
 
 [urgency_normal]
-background = "#181818"
-foreground = "#FFFFFF"
+#background = "#181818"
+#foreground = "#FFFFFF"
 timeout = 20
 
 [urgency_critical]
-background = "#181818"
-foreground = "#FFFFFF"
+#background = "#181818"
+#foreground = "#FFFFFF"
 timeout = 0
