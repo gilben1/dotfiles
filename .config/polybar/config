@@ -252,7 +252,7 @@ interval = 3.0
 label-connected = %essid% %signal%%
 label-connected-font = 1
 
-format-connected = "%{A3:nm-connection-editor:} <label-connected>%{A}"
+format-connected = "%{A2:~/.bin/scripts/restart-wifi.bash:}%{A3:nm-connection-editor:} <label-connected>%{A}%{A}"
 format-connected-underline = ${colors.color4}
 format-connected-background = ${colors.background-alt}
 
