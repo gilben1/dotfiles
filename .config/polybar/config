@@ -249,7 +249,7 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-label-connected = %essid% %signal%%
+label-connected = %essid% %signal%%  %downspeed%
 label-connected-font = 1
 
 format-connected = "%{A2:~/.bin/scripts/restart-wifi.bash:}%{A3:nm-connection-editor:} <label-connected>%{A}%{A}"
@@ -258,8 +258,8 @@ format-connected-background = ${colors.background-alt}
 
 label-disconnected =  Silence of the LANs
 label-disconnected-font = ${self.label-connected-font}
-
-format-disconnected = <label-disconnected>
+format-disconnected = "%{A2:~/.bin/scripts/restart-wifi.bash:}%{A3:nm-connection-editor:}<label-disconnected>%{A}%{A}"
+;format-disconnected = <label-disconnected>
 format-disconnected-underline = ${colors.red}
 format-disconnected-foreground = ${colors.red}
 format-disconnected-background = ${self.format-connected-background}
