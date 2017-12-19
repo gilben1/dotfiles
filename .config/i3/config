@@ -281,7 +281,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 for_window [title="^MCECS VPN$"] floating enable, resize set 700 100, move scratchpad
 
-for_window [title="^wal-timed$"] floating enable, resize set 200 50, move scratchpad
+for_window [title="rotation - wal-timed$"] floating enable, resize set 200 50, move scratchpad
 
 
 for_window [title="^[hH]top$"] floating enable, resize set 1346 600, move scratchpad
