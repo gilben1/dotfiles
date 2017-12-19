@@ -127,7 +127,8 @@ font-4 = Powerline Extra Symbols:pixelsize=14;3
 
 modules-left = space-end space-alt i3 space-alt space-end
 modules-center =
-modules-right = space-end space-alt filesystem space xbacklight space volume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt space-end
+modules-right = space-end space-alt filesystem space xbacklight space pavolume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt space-end
+;modules-right = space-end space-alt filesystem space xbacklight space volume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt space-end
 ;modules-right = space-alt filesystem space xbacklight space volume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt
 
 tray-position = right
@@ -310,6 +311,16 @@ format-muted-background = ${self.label-volume-background}
 format-muted = muted
 
 format-muted-underline = ${colors.color2}
+
+[module/pavolume]
+type = custom/script
+interval = 2
+tail = true
+label = %output%
+exec = ~/.config/polybar/pavolume.sh --tail
+
+label-background = ${colors.background}
+label-underline = ${colors.color2}
 
 [module/battery]
 type = internal/battery

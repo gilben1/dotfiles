@@ -98,8 +98,8 @@ bindsym $mod+n exec "~/.bin/scripts/rename.bash"
 #bindsym $mod+m exec "~/.bin/scripts/toggle_vga.bash"
 
 # Raise and lower volume, and toggle mute 
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
 
 ### Window Management ###
