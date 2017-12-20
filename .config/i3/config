@@ -56,7 +56,7 @@ bindsym $mod+F2 exec "~/.bin/scripts/check_and_run_mcecs_vpn"
 bindsym $mod+F1 exec "~/.bin/scripts/launch_monitor_viewer"
 
 # Launch minecraft start script
-bindsym $mod+u exec --no-startup-id "~/.bin/scripts/minecraft"
+bindsym $mod+u exec "~/.bin/scripts/minecraft"
 
 # Launch imagemagick to take screengrab
 bindsym --release Print exec "~/.bin/scripts/screencap"
