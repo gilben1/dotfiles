@@ -317,7 +317,7 @@ type = custom/script
 interval = 2
 tail = true
 label = %output%
-exec = ~/.config/polybar/pavolume.sh --tail
+exec = ~/.config/polybar/pavolume.sh --listen
 
 label-background = ${colors.background}
 label-underline = ${colors.color2}
