@@ -72,7 +72,7 @@ bindsym --release Print exec "~/.bin/scripts/screencap"
 bindsym $mod+r exec --no-startup-id "~/.bin/scripts/rofi-run"
 
 # Window selection
-bindsym $mod+f exec --no-startup-id rofi -modi window -show window -opacity 90 -width 50 -color-enabled -separator-style "solid" -font "Source Code Pro 10"
+bindsym $mod+f exec --no-startup-id rofi -modi window -show window -show-icons true
 
 bindsym $mod+p exec --no-startup-id "~/.bin/scripts/walselect"
 bindsym $mod+shift+p exec --no-startup-id "~/.bin/scripts/wal-timed-rofi"
