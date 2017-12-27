@@ -52,6 +52,7 @@ bindsym $mod+e exec --no-startup-id "thunar"
 # Launch system monitor
 bindsym $mod+grave [title="^[hH]top$"] scratchpad show; move position center
 bindsym $mod+F2 exec "~/.bin/scripts/check_and_run_mcecs_vpn"
+bindsym $mod+shift+F2 exec "cinnamon-settings network"
 
 bindsym $mod+F1 exec "~/.bin/scripts/launch_monitor_viewer"
 
