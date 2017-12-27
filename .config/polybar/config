@@ -253,14 +253,13 @@ interval = 3.0
 label-connected = %essid% %signal%%  %downspeed%
 label-connected-font = 1
 
-format-connected = "%{A2:~/.bin/scripts/restart-wifi.bash:}%{A3:nm-connection-editor:} <label-connected>%{A}%{A}"
+format-connected = "%{A1:cinnamon-settings network:}%{A2:~/.bin/scripts/restart-wifi.bash:}%{A3:nm-connection-editor:} <label-connected>%{A}%{A}%{A}"
 format-connected-underline = ${colors.color4}
 format-connected-background = ${colors.background-alt}
 
 label-disconnected =  Silence of the LANs
 label-disconnected-font = ${self.label-connected-font}
-format-disconnected = "%{A2:~/.bin/scripts/restart-wifi.bash:}%{A3:nm-connection-editor:}<label-disconnected>%{A}%{A}"
-;format-disconnected = <label-disconnected>
+format-disconnected = "%{A1:cinnamon-settings network:}%{A2:~/.bin/scripts/restart-wifi.bash:}%{A3:nm-connection-editor:}<label-disconnected>%{A}%{A}%{A}"
 format-disconnected-underline = ${colors.red}
 format-disconnected-foreground = ${colors.red}
 format-disconnected-background = ${self.format-connected-background}
