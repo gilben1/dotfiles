@@ -50,10 +50,15 @@ bindsym Ctrl+$ALT+g exec "google-chrome"
 bindsym $mod+e exec --no-startup-id "thunar"
 
 # Launch system monitor
-bindsym $mod+grave [title="^[hH]top$"] scratchpad show; move position center
-bindsym $mod+F2 exec "~/.bin/scripts/check_and_run_mcecs_vpn"
-bindsym $mod+shift+F2 exec "cinnamon-settings network"
+bindsym $mod+grave [title="^[hH]top$"] scratchpad show
 
+# Launch vpn
+bindsym $mod+F2 exec "~/.bin/scripts/check_and_run_mcecs_vpn"
+
+# Launch network settings
+bindsym $mod+shift+F2 exec --no-startup-id "cinnamon-settings network"
+
+# Launch arandr
 bindsym $mod+F1 exec "~/.bin/scripts/launch_monitor_viewer"
 
 # Launch minecraft start script
@@ -75,7 +80,10 @@ bindsym $mod+r exec --no-startup-id "~/.bin/scripts/rofi-run"
 # Window selection
 bindsym $mod+f exec --no-startup-id rofi -modi window -show window -show-icons true
 
+# Launch wallpaper selector
 bindsym $mod+p exec --no-startup-id "~/.bin/scripts/walselect"
+
+# Launch timed wallpaper
 bindsym $mod+shift+p exec --no-startup-id "~/.bin/scripts/wal-timed-rofi"
 
 
@@ -125,9 +133,6 @@ bindsym $mod+Ctrl+Right resize shrink width 1px or 1 ppt
 bindsym $mod+Ctrl+Up resize grow height 1px or 1 ppt
 bindsym $mod+Ctrl+Down resize shrink height 1px or 1 ppt
 bindsym $mod+Ctrl+Left resize grow width 1px or 1 ppt
-
-
-
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -195,8 +200,10 @@ bindsym Ctrl+$ALT+Shift+Left move container to workspace prev_on_output
 
 workspace_auto_back_and_forth yes
 
+# Move to scratchpad
 bindsym $mod+Shift+minus move container to scratchpad
-#bindsym $mod+minus [title="^((?!htop|MCECS VPN).)*$"] scratchpad show, move position center
+
+# Toggle all but special (htop, vpn) show of scratchpad
 bindsym $mod+minus [title="^((?!htop|MCECS VPN).)*$"] scratchpad show
 
 
@@ -206,15 +213,13 @@ bindsym $mod+minus [title="^((?!htop|MCECS VPN).)*$"] scratchpad show
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-#bindsym Ctrl+$ALT+Delete exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Launch rofi powermenu
 bindsym Ctrl+$ALT+Delete exec "~/.bin/scripts/powermenu"
 
 ### Window Colors ###
-#
-#
-#
 
+# Set colors from xrdb (needed for pywal colors to take effect)
 set_from_resource $black color0 #FFFFFF
 set_from_resource $grey color8 #FFFFFF
 set_from_resource $dred color1 #FFFFFF
@@ -281,12 +286,20 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Remove border for google chrome
 #for_window [title=" - Google Chrome"] border none
 
+# For the vpn, float, set size, move to position, move to scratchpad
 for_window [title="^MCECS VPN$"] floating enable, resize set 700 50, move position 333 23, move scratchpad
 
+# For timed wallpaper, set size, move to position, move to scratchpad
 for_window [title="rotation - wal-timed$"] floating enable, resize set 200 50, move position 11 23, move scratchpad
 
+# For Htop, set size, move to position, move to scratchpad
 for_window [title="^[hH]top$"] floating enable, resize set 1346 600, move position center, move scratchpad
+
+# Start htop on startup
 exec --no-startup-id urxvt -t htop -e "htop"
+
+# For cinnamon settings network, float, set size, move to scratchpad
+for_window [title="^Network$"] [class="Cinnamon-settings.py"] floating enable, move scratchpad
 
 ### Startup / Misc. Settings ###
 
@@ -303,8 +316,6 @@ exec --no-startup-id compton --config ~/.config/compton.conf -b
 
 # Start authentication agent, so I can update via gui
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
-
-
 
 # Network manager applet
 #exec --no-startup-id nm-applet
