@@ -196,7 +196,8 @@ bindsym Ctrl+$ALT+Shift+Left move container to workspace prev_on_output
 workspace_auto_back_and_forth yes
 
 bindsym $mod+Shift+minus move container to scratchpad
-bindsym $mod+minus [title="^((?!htop|MCECS VPN).)*$"] scratchpad show, move position center
+#bindsym $mod+minus [title="^((?!htop|MCECS VPN).)*$"] scratchpad show, move position center
+bindsym $mod+minus [title="^((?!htop|MCECS VPN).)*$"] scratchpad show
 
 
 ### I3 Reset / Config Stuff ###
@@ -271,7 +272,7 @@ client.urgent           #2f343a #900000 #ffffff $grey
 #        }
 #}
 
-
+# Launch polybar script every reload
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # For Window Settings
@@ -280,12 +281,11 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Remove border for google chrome
 #for_window [title=" - Google Chrome"] border none
 
-for_window [title="^MCECS VPN$"] floating enable, resize set 700 100, move scratchpad
+for_window [title="^MCECS VPN$"] floating enable, resize set 700 50, move position 333 23, move scratchpad
 
-for_window [title="rotation - wal-timed$"] floating enable, resize set 200 50, move scratchpad
+for_window [title="rotation - wal-timed$"] floating enable, resize set 200 50, move position 11 23, move scratchpad
 
-
-for_window [title="^[hH]top$"] floating enable, resize set 1346 600, move scratchpad
+for_window [title="^[hH]top$"] floating enable, resize set 1346 600, move position center, move scratchpad
 exec --no-startup-id urxvt -t htop -e "htop"
 
 ### Startup / Misc. Settings ###
