@@ -295,7 +295,7 @@ for_window [title="^MCECS VPN$"] floating enable, resize set 700 50, move positi
 for_window [title="rotation - wal-timed$"] floating enable, resize set 200 50, move position 11 23, move scratchpad
 
 # For Htop, set size, move to position, move to scratchpad
-for_window [title="^[hH]top$"] floating enable, resize set 1346 600, move position center, move scratchpad
+for_window [title="^[hH]top$"] floating enable, resize set 1346 600, move absolute position center, move scratchpad
 
 # Start htop on startup
 exec --no-startup-id urxvt -t htop -e "htop"
