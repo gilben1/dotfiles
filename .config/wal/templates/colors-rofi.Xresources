@@ -1,0 +1,16 @@
+#define BG #FF{background.strip}
+#define HI #FF{color10.strip}
+#define FG {foreground}
+#define TX {background}
+
+! State:           bg, fg, bg2,  hlbg, hlfg
+!rofi.color-normal: BG, FG, BG,   HI,   TX
+!rofi.color-active: BG, FG, BG,   HI,   TX
+!rofi.color-urgent: BG, HI, BG,   HI,   FG
+!rofi.color-window: BG, BG, BG
+
+! Rofi colors.
+rofi.color-window: argb:e8{background.strip}, {color10}, {color10}
+rofi.color-normal: argb:00{background.strip}, {foreground}, argb:00{background.strip}, {color10}, {background}
+rofi.color-active: argb:00{background.strip}, {foreground}, argb:00{background.strip}, {color10}, {background}
+rofi.color-urgent: argb:00{background.strip}, {color9}, argb:00{background.strip}, {color9}, {foreground}
