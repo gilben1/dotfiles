@@ -168,4 +168,5 @@ export CUPS_USER=nickg
 stty -ixon
 
 #exec fish "$@"
-(wal -r &)
+#(wal -r &)
+cat ~/.cache/wal/sequences &
