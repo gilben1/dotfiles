@@ -102,9 +102,9 @@ bindsym $mod+shift+l exec --no-startup-id "systemctl suspend"
 # Increase and decrease brightness
 
 # increase screen brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id "~/.bin/scripts/bright-up" 
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 5"
 # decrease screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id "~/.bin/scripts/bright-down"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 5"
 
 # Rename current workspace
 bindsym $mod+n exec "~/.bin/scripts/rename.bash"
