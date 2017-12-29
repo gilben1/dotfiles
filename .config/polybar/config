@@ -127,9 +127,7 @@ font-4 = Powerline Extra Symbols:pixelsize=14;3
 
 modules-left = space-end space-alt i3 space-alt space-end
 modules-center =
-modules-right = space-end space-alt filesystem space xbacklight space pavolume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt space-end
-;modules-right = space-end space-alt filesystem space xbacklight space volume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt space-end
-;modules-right = space-alt filesystem space xbacklight space volume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt
+modules-right = space-end space-alt filesystem space xbacklight space pavolume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space update-check date space-alt space-end
 
 tray-position = right
 tray-padding = 0
@@ -320,6 +318,20 @@ exec = ~/.config/polybar/pavolume.sh --listen
 
 label-background = ${colors.background}
 label-underline = ${colors.color2}
+
+[module/update-check]
+type = custom/script
+interval = 180
+
+format = "<label>"
+format-background = ${colors.background}
+
+label = %{A1:mintupdate:}%output%%{A}
+
+label-underline = ${colors.color9}
+
+exec = ~/.bin/scripts/update_check.bash
+
 
 [module/battery]
 type = internal/battery
