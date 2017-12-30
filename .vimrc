@@ -8,9 +8,14 @@ call vundle#begin()
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+let g:airline_powerline_fonts = 1
+
 
 set exrc
 "eShows line numbers on left side
@@ -61,3 +66,4 @@ nnoremap <leader><space> :nohlsearch<CR>
 set title
 colorscheme 0x7A69_dark
 "set cursorline
+set noshowmode
