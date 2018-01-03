@@ -53,7 +53,7 @@ bindsym $mod+e exec "thunar"
 bindsym $mod+grave [title="^[hH]top$"] scratchpad show
 
 # Launch vpn
-bindsym $mod+F2 exec "~/.bin/scripts/check_and_run_mcecs_vpn"
+bindsym $mod+F2 exec --no-startup-id "~/.bin/scripts/check_and_run_mcecs_vpn"
 
 
 
@@ -65,13 +65,13 @@ bindsym $mod+shift+F2 exec --no-startup-id "~/.bin/scripts/launch_cinn_netw"
 bindsym $mod+F12 exec --no-startup-id "~/.bin/scripts/launch_cinn_sound"
 
 # Launch arandr
-bindsym $mod+F1 exec "~/.bin/scripts/launch_monitor_viewer"
+bindsym $mod+F1 exec --no-startup-id "~/.bin/scripts/launch_monitor_viewer"
 
 # Launch minecraft start script
-bindsym $mod+u exec "~/.bin/scripts/minecraft"
+bindsym $mod+u exec --no-startup-id "~/.bin/scripts/minecraft"
 
 # Launch imagemagick to take screengrab
-bindsym --release Print exec "~/.bin/scripts/screencap"
+bindsym --release Print exec --no-startup-id "~/.bin/scripts/screencap"
 
 
 # start dmenu (a program launcher)
