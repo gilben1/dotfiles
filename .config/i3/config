@@ -44,10 +44,10 @@ gaps outer 4
 bindsym Ctrl+$ALT+t exec urxvt -e /usr/bin/fish
 
 # Google chrome launch
-bindsym Ctrl+$ALT+g exec "google-chrome"
+bindsym Ctrl+$ALT+g exec --no-startup-id "google-chrome"
 
 # Launch file browser
-bindsym $mod+e exec --no-startup-id "thunar"
+bindsym $mod+e exec "thunar"
 
 # Launch system monitor
 bindsym $mod+grave [title="^[hH]top$"] scratchpad show
@@ -113,9 +113,9 @@ bindsym $mod+n exec "~/.bin/scripts/rename.bash"
 #bindsym $mod+m exec "~/.bin/scripts/toggle_vga.bash"
 
 # Raise and lower volume, and toggle mute 
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%- unmute
-bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse set Master 5%- unmute
+bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master toggle
 
 ### Window Management ###
 
@@ -330,9 +330,9 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 exec --no-startup-id mintupdate-launcher
 
 # kill old notification daemon and startup dunst
-exec killall -q fsnotify_mark
+exec --no-startup-id killall -q fsnotify_mark
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 
 # Background setting
-exec "~/.bin/scripts/walgrab"
+exec --no-startup-id "~/.bin/scripts/walgrab"
