@@ -50,7 +50,8 @@ bindsym Ctrl+$ALT+g exec --no-startup-id "google-chrome"
 bindsym $mod+e exec "thunar"
 
 # Launch system monitor
-bindsym $mod+grave [title="^[hH]top$"] scratchpad show
+#bindsym $mod+grave [title="^[hH]top$"] scratchpad show
+bindsym $mod+grave exec --no-startup-id "~/.bin/scripts/launch_top"
 
 # Launch vpn
 bindsym $mod+F2 exec --no-startup-id "~/.bin/scripts/check_and_run_mcecs_vpn"
