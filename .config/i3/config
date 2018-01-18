@@ -155,6 +155,9 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+x layout toggle split
 
+bindsym $mod+Tab exec --no-startup-id "~/.bin/scripts/i3ass/i3flip n"
+bindsym $mod+Shift+Tab exec --no-startup-id "~/.bin/scripts/i3ass/i3flip p"
+
 #workspace_layout tabbed
 
 new_window pixel 1
