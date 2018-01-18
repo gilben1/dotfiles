@@ -1,5 +1,5 @@
 cat ~/ascii_art/affinitext7.ascii
-set -x PATH $PATH $HOME/.bin/scripts
+set -x PATH $PATH $HOME/.bin/scripts $HOME/.bin/scripts/i3ass
 
 set -x VISUAL vim
 set -x EDITOR vim
