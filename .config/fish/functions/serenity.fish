@@ -1,3 +1,3 @@
 function serenity
-	ssh -4 nickgg@serenity.cat.pdx.edu $argv;
+	ssh -4 nickg@serenity.cat.pdx.edu $argv;
 end
