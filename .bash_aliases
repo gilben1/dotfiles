@@ -42,10 +42,11 @@ alias sirrah='ssh combscat@sirrah.kittenz'
 
 function irc()
 {
+    wal -r
     echo "Starting up notification script"
     listen.sh &
 
-    ssh -4 nickg@serenity.cat.pdx.edu
+    mosh nickg@serenity.cat.pdx.edu
     kill $(ps -s $$ -o pid=)
 }
 
@@ -78,7 +79,6 @@ alias fix-gdrive='google-drive-ocamlfuse -cc'
 
 # Shows current IP address
 alias myip='curl http://ipecho.net/plain; echo'
-alias games='echo ./2048, bastet, greed, nethack, ninvaders, nsnake, pacman4console'
 
 alias mcecs-vpn='cd ~/.config/openvpn; sudo openvpn --config cecs.ovpn'
 
