@@ -152,7 +152,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$HOME/.bin/scripts:$PATH"
+export PATH="$HOME/.bin/scripts:$HOME/.bin/scripts/i3ass:$PATH"
 #xterm-256color
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -169,4 +169,4 @@ stty -ixon
 
 #exec fish "$@"
 #(wal -r &)
-cat ~/.cache/wal/sequences &
+#cat ~/.cache/wal/sequences &
