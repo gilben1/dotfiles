@@ -42,7 +42,7 @@ alias sirrah='ssh combscat@sirrah.kittenz'
 
 function irc()
 {
-    wal -r
+    #wal -r
     echo "Starting up notification script"
     listen.sh &
 
