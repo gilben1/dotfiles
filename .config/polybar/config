@@ -432,8 +432,9 @@ format-background = ${colors.background}
 
 click-left = exec ~/.bin/scripts/check_and_run_mcecs_vpn
 
-format-underline = ${colors.red}
-format-foreground = ${colors.red}
+;format-overline = ${colors.color3}
+;format-underline = ${colors.color3}
+format-foreground = ${colors.color3}
 
 [module/left0]
 type = custom/text
