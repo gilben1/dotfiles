@@ -37,8 +37,6 @@ alias ada-cs='ssh -4 gnick@ada.cs.pdx.edu'
 alias ada-cat='ssh -4 nickg@ada.cs.pdx.edu'
 alias babbage='ssh -4 nickg@babbage.cs.pdx.edu'
 alias serenity='ssh -4 nickg@serenity.cat.pdx.edu'
-#alias sirrah='ssh combscat@131.252.211.220'
-alias sirrah='ssh combscat@sirrah.kittenz'
 
 function irc()
 {
