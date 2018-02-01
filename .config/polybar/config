@@ -99,6 +99,9 @@ font-4 = Powerline Extra Symbols:pixelsize=9;2
 
 [bar/main]
 
+cursor-click = pointer
+
+
 bottom = true
 
 monitor = ${env:MONITOR:LVDS1}
