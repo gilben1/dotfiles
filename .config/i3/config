@@ -57,7 +57,6 @@ bindsym $mod+grave exec --no-startup-id "~/.bin/scripts/launch_top"
 bindsym $mod+F2 exec --no-startup-id "~/.bin/scripts/check_and_run_mcecs_vpn"
 
 
-
 # Launch network settings
 #bindsym $mod+shift+F2 exec --no-startup-id "cinnamon-settings network"
 bindsym $mod+shift+F2 exec --no-startup-id "~/.bin/scripts/launch_cinn_netw"
@@ -83,6 +82,11 @@ bindsym --release Print exec --no-startup-id "~/.bin/scripts/screencap"
 
 # Rofi application launcher
 bindsym $mod+r exec --no-startup-id "~/.bin/scripts/rofi-run"
+
+
+# Rofimount script
+bindsym $mod+m exec --no-startup-id "~/.bin/scripts/rofimount"
+
 
 # Window selection
 bindsym $mod+f exec --no-startup-id rofi -modi window -show window -show-icons true
