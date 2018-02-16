@@ -259,7 +259,7 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-label-connected = %essid% %signal%%  %downspeed%
+label-connected = %essid% %signal%% (%downspeed%)
 label-connected-font = 1
 
 format-connected = "%{A1:~/.bin/scripts/launch_cinn_netw:}%{A2:~/.bin/scripts/restart-wifi.bash:}%{A3:nm-connection-editor:} <label-connected>%{A}%{A}%{A}"
@@ -334,7 +334,9 @@ label-underline = ${colors.color2}
 type = custom/script
 interval = 180
 
-format = "<label>"
+format = "<label>
+
+"
 format-background = ${colors.background}
 
 label = %{A1:mintupdate:}%output%%{A}
