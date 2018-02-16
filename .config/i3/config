@@ -44,7 +44,7 @@ gaps outer 4
 bindsym Ctrl+$ALT+t exec urxvt -e /usr/bin/fish
 
 # Google chrome launch
-bindsym Ctrl+$ALT+g exec --no-startup-id "google-chrome"
+#bindsym Ctrl+$ALT+g exec --no-startup-id "google-chrome"
 
 # Launch file browser
 bindsym $mod+e exec "thunar"
