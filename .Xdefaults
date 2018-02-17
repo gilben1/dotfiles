@@ -54,7 +54,7 @@ URxvt.scrollBar:            false
 ! Perl extensions
 URxvt.perl-ext-common:      default,matcher,font-size
 URxvt.matcher.button:       1
-URxvt.urlLauncher:          google-chrome
+URxvt.url-launcher:         /home/nick/.bin/scripts/firefox_launch
 
 
 ! Cursor
