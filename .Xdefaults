@@ -15,6 +15,10 @@ Xft.hintstyle:              hintslight
 ! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
 !-------------------------------------------------------------------------------
 
+!URxvt.iconFile:             /usr/share/pixmaps/urxvt_48x48.xpm
+URxvt.iconFile:             /usr/share/icons/Paper/32x32/apps/utilities-terminal-alt.png
+
+
 URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.transparent:          false
