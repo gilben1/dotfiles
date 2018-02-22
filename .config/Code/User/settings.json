@@ -1,0 +1,11 @@
+{
+    "editor.fontFamily": "'Source Code Pro', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 11,
+    "workbench.colorTheme": "Monokai",
+    "workbench.startupEditor": "none",
+    "window.enableMenuBarMnemonics": false,
+    "window.menuBarVisibility": "hidden",
+    "git.autofetch": true,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "workbench.statusBar.feedback.visible": false
+}
