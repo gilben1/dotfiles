@@ -33,8 +33,8 @@ font pango:Hack, FontAwesome 0
 floating_modifier $mod
 
 ### i3-gaps stuff ###
-gaps inner 7
-gaps outer 4
+gaps inner 20
+gaps outer -9
 
 ### Program Launching ###
 
