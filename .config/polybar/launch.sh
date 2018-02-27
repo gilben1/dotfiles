@@ -21,11 +21,11 @@ sleep 1
 ~/.bin/scripts/hideIt.sh --name '^polybar-main_LVDS1$' \
           --direction bottom \
           --peek 3 \
-          -r 0x768+1366+-40 &
+          -r 0x768+1366+-20 &
 
 ~/.bin/scripts/hideIt.sh --name '^polybar-top_LVDS1$' \
           --direction top \
           --peek 1 \
-          -r 0x0+1366+40 &
+          -r 0x0+1366+10 &
 
 echo "Bars launched..."
