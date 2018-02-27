@@ -163,7 +163,8 @@ label-unmounted-font = ${self.label-mounted-font}
 label-mounted-background = ${colors.background-alt}
 label-unmounted-background = ${self.label-mounted-background}
 
-label-mounted-underline = ${colors.color0}
+;label-mounted-underline = ${colors.color0}
+label-mounted-overline = ${colors.color0}
 
 [module/i3]
 type = internal/i3
@@ -215,7 +216,8 @@ label-font = 1
 label-background = ${colors.background}
 
 format = <label>
-format-underline = ${colors.color1}
+;format-underline = ${colors.color1}
+format-overline = ${colors.color1}
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -230,7 +232,8 @@ label = CPU %percentage%%
 label-font = 1
 label-background = ${colors.background-alt}
 
-format-underline = ${colors.color7}
+;format-underline = ${colors.color7}
+format-overline = ${colors.color7}
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -250,7 +253,8 @@ label = RAM %percentage_used%%
 label-font = 1
 label-background = ${colors.background-alt}
 
-format-underline = ${colors.color5}
+;format-underline = ${colors.color5}
+format-overline = ${colors.color5}
 
 
 [module/wlan]
@@ -262,15 +266,19 @@ label-connected = %essid% %signal%% (%downspeed%)
 label-connected-font = 1
 
 format-connected = "%{A1:~/.bin/scripts/launch_cinn_netw:}%{A2:~/.bin/scripts/restart-wifi.bash:}%{A3:nm-connection-editor:} <label-connected>%{A}%{A}%{A}"
-format-connected-underline = ${colors.color4}
 format-connected-background = ${colors.background-alt}
 
 label-disconnected =  Silence of the LANs
 label-disconnected-font = ${self.label-connected-font}
 format-disconnected = "%{A1:~/.bin/scripts/launch_cinn_netw:}%{A2:~/.bin/scripts/restart-wifi.bash:}%{A3:nm-connection-editor:}<label-disconnected>%{A}%{A}%{A}"
-format-disconnected-underline = ${colors.red}
 format-disconnected-foreground = ${colors.red}
 format-disconnected-background = ${self.format-connected-background}
+
+;format-connected-underline = ${colors.color4}
+format-connected-overline = ${colors.color4}
+
+;format-disconnected-underline = ${colors.red}
+format-disconnected-overline = ${colors.red}
 
 [module/eth]
 type = internal/network
@@ -279,13 +287,17 @@ interval = 3.0
 
 label-connected = %local_ip%
 
-format-connected-underline = ${colors.color4}
 format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected-background = ${colors.background-alt}
 
 format-disconnected =
 format-disconnected-background = ${self.format-connected-background}
-format-disconnected-underline = ${self.format-connected-underline}
+
+;format-connected-underline = ${colors.color4}
+format-connected-overline = ${colors.color4}
+
+;format-disconnected-underline = ${self.format-connected-underline}
+format-disconnected-overline = ${self.format-connected-overline}
 
 [module/date]
 type = internal/date
@@ -301,7 +313,9 @@ label-background = ${colors.background}
 
 format-prefix = 
 format-prefix-background = ${self.label-background}
-format-underline = ${colors.color9}
+
+;format-underline = ${colors.color9}
+format-overline = ${colors.color9}
 
 [module/volume]
 type = internal/volume
@@ -311,13 +325,16 @@ label-volume-font = 1
 label-volume-background = ${colors.background-alt}
 
 format-volume = <label-volume>
-format-volume-underline = ${colors.color2}
 
 format-muted-prefix = " "
 format-muted-background = ${self.label-volume-background}
 format-muted = muted
 
-format-muted-underline = ${colors.color2}
+;format-volume-underline = ${colors.color2}
+format-volume-overline = ${colors.color2}
+
+;format-muted-underline = ${colors.color2}
+format-muted-overline = ${colors.color2}
 
 [module/pavolume]
 type = custom/script
@@ -327,7 +344,9 @@ label = %output%
 exec = ~/.config/polybar/pavolume.sh --listen
 
 label-background = ${colors.background}
-label-underline = ${colors.color2}
+
+;label-underline = ${colors.color2}
+label-overline = ${colors.color2}
 
 [module/update-check]
 type = custom/script
@@ -340,7 +359,8 @@ format-background = ${colors.background}
 
 label = %{A1:mintupdate:}%output%%{A}
 
-label-underline = ${colors.color9}
+;label-underline = ${colors.color9}
+label-overline = ${colors.color9}
 
 exec = ~/.bin/scripts/update_check.bash
 
@@ -358,7 +378,6 @@ label-charging-font = 1
 label-charging-background = ${colors.background}
 
 format-charging = <animation-charging><label-charging>
-format-charging-underline = ${colors.color5}
 
 label-discharging = %percentage%% %time%
 label-discharging-font = ${self.label-charging-font}
@@ -366,7 +385,6 @@ label-discharging-background = ${colors.background}
 
 format-discharging = <ramp-capacity><label-discharging>
 format-discharging-background = ${colors.background}
-format-discharging-underline = ${self.format-charging-underline}
 
 label-full = %percentage%%
 label-full-font = ${self.label-charging-font}
@@ -376,7 +394,6 @@ format-full-prefix= " "
 format-full-prefix-background = ${colors.background}
 
 format-full-foreground = ${colors.color5}
-format-full-underline = ${colors.color5}
 
 ramp-capacity-0 = " "
 ramp-capacity-1 = " "
@@ -395,6 +412,15 @@ animation-charging-4 = " "
 animation-charging-background = ${colors.background}
 animation-charging-framerate = 750
 
+;format-charging-underline = ${colors.color5}
+format-charging-overline = ${colors.color5}
+
+;format-discharging-underline = ${self.format-charging-underline}
+format-discharging-overline = ${self.format-charging-overline}
+
+;format-full-underline = ${colors.color5}
+format-full-overline = ${colors.color5}
+
 [module/temperature]
 type = internal/temperature
 thermal-zone = 2
@@ -402,7 +428,6 @@ warn-temperature = 80
 
 format = <label>
 format-background = ${colors.background-alt}
-format-underline = ${colors.color8}
 format-warn = <label-warn>
 format-warn-underline = ${colors.red_d}
 
@@ -417,6 +442,9 @@ ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
+;format-underline = ${colors.color8}
+format-overline = ${colors.color8}
+
 [module/vpnup]
 type = custom/script
 exec = pgrep openvpn > /dev/null && echo " vpn up"
@@ -427,9 +455,10 @@ format-background = ${colors.background}
 
 click-left = exec ~/.bin/scripts/check_and_run_mcecs_vpn
 
-format-underline = ${colors.color3}
 format-foreground = ${colors.color3}
 
+;format-underline = ${colors.color3}
+format-overline = ${colors.color3}
 
 [module/vpndown]
 type = custom/script
@@ -441,72 +470,7 @@ format-background = ${colors.background}
 
 click-left = exec ~/.bin/scripts/check_and_run_mcecs_vpn
 
-;format-overline = ${colors.color3}
-;format-underline = ${colors.color3}
 format-foreground = ${colors.dgrey}
-
-[module/left0]
-type = custom/text
-content = " %{T5}%{T-}"
-content-foreground = ${colors.background-alt}
-
-[module/left0b]
-type = custom/text
-content = " %{T5}%{T-}"
-content-foreground = ${colors.background}
-
-[module/left1]
-type = custom/text
-content = " %{T5}%{T-}"
-content-foreground = ${colors.background}
-content-background = ${colors.background-alt}
-
-[module/left2]
-type = custom/text
-content = " %{T5}%{T-}"
-content-foreground = ${colors.background-alt}
-content-background = ${colors.background}
-
-
-[module/left3]
-type = custom/text
-content = " %{T5}%{T-}"
-content-foreground = ${colors.transparent}
-content-background = ${colors.background}
-
-[module/left4]
-type = custom/text
-content = " %{T5}%{T-} "
-content-foreground = ${colors.background}
-content-background = ${colors.background-alt}
-
-[module/right0]
-type = custom/text
-content = "%{T5}%{T-}"
-content-foreground = ${colors.transparent}
-content-background = ${colors.background-alt}
-
-[module/right1]
-type = custom/text
-content = "%{T5}%{T-} "
-content-foreground = ${colors.background-alt}
-
-[module/right1b]
-type = custom/text
-content = "%{T5}%{T-} "
-content-foreground = ${colors.background}
-
-[module/right2]
-type = custom/text
-content = "%{T5}%{T-} "
-content-foreground = ${colors.background-alt}
-content-background = ${colors.background}
-
-[module/right3]
-type = custom/text
-content = "%{T5}%{T-}"
-content-foreground = ${colors.transparent}
-content-background = ${colors.background}
 
 [module/space]
 type = custom/text
@@ -523,85 +487,6 @@ type = custom/text
 content = " "
 content-background = ${colors.color_end}
 
-[module/color0-block]
-type = custom/text
-content = " 0 "
-content-background = ${xrdb:color0}
-
-[module/color1-block]
-type = custom/text
-content = " 1 "
-content-background = ${xrdb:color1}
-
-[module/color2-block]
-type = custom/text
-content = " 2 "
-content-background = ${xrdb:color2}
-
-[module/color3-block]
-type = custom/text
-content = " 3 "
-content-background = ${xrdb:color3}
-
-[module/color4-block]
-type = custom/text
-content = " 4 "
-content-background = ${xrdb:color4}
-
-[module/color5-block]
-type = custom/text
-content = " 5 "
-content-background = ${xrdb:color5}
-
-[module/color6-block]
-type = custom/text
-content = " 6 "
-content-background = ${xrdb:color6}
-
-[module/color7-block]
-type = custom/text
-content = " 7 "
-content-background = ${xrdb:color7}
-
-[module/color8-block]
-type = custom/text
-content = " 8 "
-content-background = ${xrdb:color8}
-
-[module/color9-block]
-type = custom/text
-content = " 9 "
-content-background = ${xrdb:color9}
-
-[module/color10-block]
-type = custom/text
-content = " 10 "
-content-background = ${xrdb:color10}
-
-[module/color11-block]
-type = custom/text
-content = " 11 "
-content-background = ${xrdb:color11}
-
-[module/color12-block]
-type = custom/text
-content = " 12 "
-content-background = ${xrdb:color12}
-
-[module/color13-block]
-type = custom/text
-content = " 13 "
-content-background = ${xrdb:color13}
-
-[module/color14-block]
-type = custom/text
-content = " 14 "
-content-background = ${xrdb:color14}
-
-[module/color15-block]
-type = custom/text
-content = " 15 "
-content-background = ${xrdb:color15}
 
 [settings]
 screenchange-reload = true
