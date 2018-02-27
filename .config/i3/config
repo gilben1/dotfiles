@@ -140,10 +140,14 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+Ctrl+Right resize shrink width 1px or 1 ppt
-bindsym $mod+Ctrl+Up resize grow height 1px or 1 ppt
-bindsym $mod+Ctrl+Down resize shrink height 1px or 1 ppt
-bindsym $mod+Ctrl+Left resize grow width 1px or 1 ppt
+#bindsym $mod+Ctrl+Right resize shrink width 1px or 1 ppt
+bindsym $mod+Ctrl+Right resize shrink width 5 px
+#bindsym $mod+Ctrl+Up resize grow height 1px or 1 ppt
+bindsym $mod+Ctrl+Up resize grow height 5 px
+#bindsym $mod+Ctrl+Down resize shrink height 1px or 1 ppt
+bindsym $mod+Ctrl+Down resize shrink height 5 px
+#bindsym $mod+Ctrl+Left resize grow width 1px or 1 ppt
+bindsym $mod+Ctrl+Left resize grow width 5 px
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -290,7 +294,6 @@ client.urgent           #2f343a #900000 #ffffff $grey
 #                binding_mode       #2f343a #900000 #ffffff
 #        }
 #}
-
 # Launch polybar script every reload
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
