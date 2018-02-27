@@ -34,7 +34,7 @@ floating_modifier $mod
 
 ### i3-gaps stuff ###
 gaps inner 20
-gaps outer -9
+gaps outer -10
 
 ### Program Launching ###
 
