@@ -15,7 +15,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Launch bar1 and bar2
 polybar main &
 polybar top &
-polybar dummy &
+#polybar dummy &
 
 sleep 2
 
@@ -29,4 +29,13 @@ sleep 2
           --peek 1 \
           -r 0x0+1366+10 &
 
+#~/.bin/scripts/hideIt.sh --name '^polybar-main_LVDS1$' \
+#          --direction bottom \
+#          --peek 3 \
+#          -S
+#
+#~/.bin/scripts/hideIt.sh --name '^polybar-top_LVDS1$' \
+#          --direction top \
+#          --peek 1 \
+#          -S
 echo "Bars launched..."
