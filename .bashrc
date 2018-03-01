@@ -9,8 +9,8 @@ case $- in
 esac
 
 #cat ~/ascii_art/affinitext.ascii
-cat ~/ascii_art/affinitext7.ascii
-
+#cat ~/ascii_art/affinitext7.ascii
+echo "> Bash <"
 
 
 
