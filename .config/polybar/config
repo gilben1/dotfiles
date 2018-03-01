@@ -1,6 +1,5 @@
 ; TODO make statuses hide overline
 ; e.g.  Battery low = no overline
-;       wifi down   = no overline
 ;       mute        = no overline maybe
 
 
@@ -106,13 +105,15 @@ enable-ipc = true
 
 width = 100%
 
-height = 13
+;height = 13
+height = 20
 
 fixed-center = true
 foreground = ${colors.foreground}
 background = ${colors.transparent}
 
-line-size = 1
+;line-size = 1
+line-size = 3
 line-color = #f00
 
 border-size = 0
@@ -122,7 +123,7 @@ module-margin-right = 0
 
 modules-center = space-end space xwindow space space-end
 
-font-0 = Hack:pixelsize=7;2
+font-0 = Hack:pixelsize=7;1
 font-1 = unifont:pixelsize=10;1
 font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome:pixelsize=7;2
@@ -178,7 +179,8 @@ label = "%title:0:260:...%"
 label-font = 1
 label-foreground = ${colors.white}
 label-background = ${colors.background}
-label-overline = ${colors.color_end}
+;label-overline = ${colors.color_end}
+label-underline = ${colors.color_end}
 
 [module/filesystem]
 type = internal/fs

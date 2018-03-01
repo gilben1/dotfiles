@@ -26,7 +26,7 @@ sleep 2
 
 ~/.bin/scripts/hideIt.sh --name '^polybar-top_LVDS1$' \
           --direction top \
-          --peek 1 \
+          --peek 3 \
           -r 0x0+1366+10 &
 
 #~/.bin/scripts/hideIt.sh --name '^polybar-main_LVDS1$' \
