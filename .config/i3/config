@@ -57,6 +57,9 @@ bindsym $mod+grave exec --no-startup-id "~/.bin/scripts/launch_top"
 bindsym $mod+F2 exec --no-startup-id "~/.bin/scripts/check_and_run_mcecs_vpn"
 
 
+bindsym Menu exec --no-startup-id "~/.bin/scripts/mousetobar -t"
+bindsym --release Menu exec --no-startup-id "~/.bin/scripts/mousetobar -o"
+
 # Launch network settings
 #bindsym $mod+shift+F2 exec --no-startup-id "cinnamon-settings network"
 bindsym $mod+shift+F2 exec --no-startup-id "~/.bin/scripts/launch_cinn_netw"
