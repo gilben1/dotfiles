@@ -13,9 +13,27 @@ done
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar1 and bar2
-polybar main &
-polybar top &
-#polybar dummy &
+#if [ -f ~/.config/polybar/dyn.var ] ; then
+#    polybar main &
+#    polybar top &
+#elif [ -f ~/.config/polybar/static.var ] ; then
+#    polybar --config="$HOME/.config/polybar/config_static" main &
+#    polybar --config="$HOME/.config/polybar/config_static" top &
+#    #polybar dummy &
+#fi
+
+if [ -f ~/.config/polybar/dyntop.var ] ; then
+    polybar top &
+elif [ -f ~/.config/polybar/statictop.var ] ; then
+    polybar --config="$HOME/.config/polybar/config_static" top &
+fi
+
+if [ -f ~/.config/polybar/dynbot.var ] ; then
+    polybar main &
+elif [ -f ~/.config/polybar/staticbot.var ] ; then
+    polybar --config="$HOME/.config/polybar/config_static" main &
+fi
+
 
 sleep 2
 
@@ -28,6 +46,12 @@ sleep 2
           --direction top \
           --peek 3 \
           -r 0x0+1366+10 &
+
+~/.bin/scripts/hideIt.sh --name '^Polybar tray window$' \
+          --direction bottom \
+          --peek 3 \
+          -r 0x768+1366+-10 &
+
 
 #~/.bin/scripts/hideIt.sh --name '^polybar-main_LVDS1$' \
 #          --direction bottom \
