@@ -90,6 +90,9 @@ bindsym $mod+r exec --no-startup-id "~/.bin/scripts/rofi-run"
 # Rofimount script
 bindsym $mod+m exec --no-startup-id "~/.bin/scripts/rofimount"
 
+# polyswap-rofi script
+bindsym $mod+b exec --no-startup-id "~/.bin/scripts/polyswap-rofi"
+
 
 # Window selection
 bindsym $mod+f exec --no-startup-id rofi -modi window -show window -show-icons true
