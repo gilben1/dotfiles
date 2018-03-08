@@ -66,19 +66,19 @@ bindsym --release Print exec --no-startup-id "~/.bin/scripts/screencap"
 bindsym $mod+r exec --no-startup-id "~/.bin/scripts/rofi-run"
 
 # Rofimount script
-bindsym $mod+m exec --no-startup-id "~/.bin/scripts/rofimount"
+bindsym $mod+m exec --no-startup-id "~/.bin/scripts/rofi-mount"
 
-# polyswap-rofi script
-bindsym $mod+b exec --no-startup-id "~/.bin/scripts/polyswap-rofi"
+# rofi-polyswap script
+bindsym $mod+b exec --no-startup-id "~/.bin/scripts/rofi-polyswap"
 
 # Window selection
 bindsym $mod+f exec --no-startup-id rofi -modi window -show window -show-icons true
 
 # Launch wallpaper selector
-bindsym $mod+p exec --no-startup-id "~/.bin/scripts/walselect"
+bindsym $mod+p exec --no-startup-id "~/.bin/scripts/rofi-walselect"
 
 # Launch timed wallpaper
-bindsym $mod+shift+p exec --no-startup-id "~/.bin/scripts/wal-timed-rofi"
+bindsym $mod+shift+p exec --no-startup-id "~/.bin/scripts/rofi-wal-timed"
 
 
 ### System Control ###
