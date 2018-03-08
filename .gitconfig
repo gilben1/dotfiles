@@ -17,6 +17,7 @@ email = nickgilbert2@gmail.com
     puo = push -u origin
     rao = remote add origin
     rro = remote remove origin
+    rsuo = remote set-url origin
     lg=log --all --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit
 [push]
     default = simple
