@@ -13,21 +13,7 @@
 set $mod Mod4
 set $ALT Mod1
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-#font consolas:8
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono, FontAwesome 7.1
 font pango:Hack, FontAwesome 0
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -36,21 +22,22 @@ floating_modifier $mod
 gaps inner 15
 gaps outer -5
 
+### various i3 settings ###
+
+focus_follows_mouse no
+workspace_auto_back_and_forth yes
+
+
+
 ### Program Launching ###
 
-# start a terminal
-#bindsym Ctrl+$ALT+t exec urxvt
-#bindsym Ctrl+$ALT+t exec i3-sensible-terminal -e /usr/bin/fish
+# start a terminal in fish shell
 bindsym Ctrl+$ALT+t exec urxvt -e /usr/bin/fish
-
-# Google chrome launch
-#bindsym Ctrl+$ALT+g exec --no-startup-id "google-chrome"
 
 # Launch file browser
 bindsym $mod+e exec "thunar"
 
 # Launch system monitor
-#bindsym $mod+grave [title="^[hH]top$"] scratchpad show
 bindsym $mod+grave exec --no-startup-id "~/.bin/scripts/launch_top"
 
 # Launch vpn
@@ -61,7 +48,6 @@ bindsym Menu exec --no-startup-id "~/.bin/scripts/mousetobar -t"
 bindsym --release Menu exec --no-startup-id "~/.bin/scripts/mousetobar -o"
 
 # Launch network settings
-#bindsym $mod+shift+F2 exec --no-startup-id "cinnamon-settings network"
 bindsym $mod+shift+F2 exec --no-startup-id "~/.bin/scripts/launch_cinn_netw"
 
 # Launch cinnamon sound thing
@@ -76,23 +62,14 @@ bindsym $mod+u exec --no-startup-id "~/.bin/scripts/minecraft"
 # Launch imagemagick to take screengrab
 bindsym --release Print exec --no-startup-id "~/.bin/scripts/screencap"
 
-
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-
 # Rofi application launcher
 bindsym $mod+r exec --no-startup-id "~/.bin/scripts/rofi-run"
-
 
 # Rofimount script
 bindsym $mod+m exec --no-startup-id "~/.bin/scripts/rofimount"
 
 # polyswap-rofi script
 bindsym $mod+b exec --no-startup-id "~/.bin/scripts/polyswap-rofi"
-
 
 # Window selection
 bindsym $mod+f exec --no-startup-id rofi -modi window -show window -show-icons true
@@ -105,6 +82,9 @@ bindsym $mod+shift+p exec --no-startup-id "~/.bin/scripts/wal-timed-rofi"
 
 
 ### System Control ###
+
+# Launch rofi powermenu
+bindsym Ctrl+$ALT+Delete exec "~/.bin/scripts/powermenu"
 
 # Lock and suspend
 bindsym $mod+l exec --no-startup-id "$HOME/.bin/scripts/lock.bash"
@@ -119,9 +99,6 @@ bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 5"
 
 # Rename current workspace
 bindsym $mod+n exec "~/.bin/scripts/rename.bash"
-
-# Monitor setup, puts output of VGA port to left of laptop screen
-#bindsym $mod+m exec "~/.bin/scripts/toggle_vga.bash"
 
 # Raise and lower volume, and toggle mute 
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse set Master 5%+ unmute
@@ -146,13 +123,9 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-#bindsym $mod+Ctrl+Right resize shrink width 1px or 1 ppt
 bindsym $mod+Ctrl+Right resize shrink width 5 px
-#bindsym $mod+Ctrl+Up resize grow height 1px or 1 ppt
 bindsym $mod+Ctrl+Up resize grow height 5 px
-#bindsym $mod+Ctrl+Down resize shrink height 1px or 1 ppt
 bindsym $mod+Ctrl+Down resize shrink height 5 px
-#bindsym $mod+Ctrl+Left resize grow width 1px or 1 ppt
 bindsym $mod+Ctrl+Left resize grow width 5 px
 
 # split in horizontal orientation
@@ -172,10 +145,7 @@ bindsym $mod+x layout toggle split
 bindsym $mod+Tab exec --no-startup-id "~/.bin/scripts/i3ass/i3flip n"
 bindsym $mod+Shift+Tab exec --no-startup-id "~/.bin/scripts/i3ass/i3flip p"
 
-#workspace_layout tabbed
-
 new_window pixel 1
-#hide_edge_borders both
 new_float pixel 1
 
 # toggle tiling / floating
@@ -222,14 +192,12 @@ bindsym Ctrl+$ALT+Left workspace prev_on_output
 bindsym Ctrl+$ALT+Shift+Right move container to workspace next_on_output
 bindsym Ctrl+$ALT+Shift+Left move container to workspace prev_on_output
 
-workspace_auto_back_and_forth yes
 
 # Move to scratchpad
 bindsym $mod+Shift+minus move container to scratchpad
 
 # Toggle all but special (htop, vpn) show of scratchpad
 bindsym $mod+minus [title="^((?!Perma-Htop|MCECS VPN|Network|Sound).)*$"] scratchpad show
-
 
 ### I3 Reset / Config Stuff ###
 
@@ -238,8 +206,6 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# Launch rofi powermenu
-bindsym Ctrl+$ALT+Delete exec "~/.bin/scripts/powermenu"
 
 ### Window Colors ###
 
@@ -300,14 +266,12 @@ client.urgent           #2f343a #900000 #ffffff $grey
 #                binding_mode       #2f343a #900000 #ffffff
 #        }
 #}
+
 # Launch polybar script every reload
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# For Window Settings
+### For Window Settings ###
 # Settings that happen for a certain window
-
-# Remove border for google chrome
-#for_window [title=" - Google Chrome"] border none
 
 # For the vpn, float, set size, move to position, move to scratchpad
 for_window [title="^MCECS VPN$"] floating enable, resize set 700 50, move position 333 23, move scratchpad
@@ -329,8 +293,6 @@ for_window [title="^(Network|Sound)$" class="Cinnamon-settings.py"] floating ena
 # Auto disables tapping with touchpad
 exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Time" 0
 
-focus_follows_mouse no
-
 # Start ssh-add so I don't need to repeatedly enter keys
 exec --no-startup-id ssh-add ~/.ssh/id_rsa
 
@@ -340,16 +302,12 @@ exec --no-startup-id compton --config ~/.config/compton.conf -b
 # Start authentication agent, so I can update via gui
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 
-# Network manager applet
-#exec --no-startup-id nm-applet
-
 # Launch update manager for taskbar thing
 exec --no-startup-id mintupdate-launcher
 
 # kill old notification daemon and startup dunst
 exec --no-startup-id killall -q fsnotify_mark
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
-
 
 # Background setting
 exec --no-startup-id "~/.bin/scripts/walgrab"
