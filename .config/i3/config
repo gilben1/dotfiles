@@ -98,7 +98,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 5"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 5"
 
 # Rename current workspace
-bindsym $mod+n exec "~/.bin/scripts/rename.bash"
+bindsym $mod+n exec "~/.bin/scripts/rofi-rename"
 
 # Raise and lower volume, and toggle mute 
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse set Master 5%+ unmute
