@@ -99,6 +99,9 @@ font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome:pixelsize=7;2
 font-4 = Powerline Extra Symbols:pixelsize=9;2
 
+tray-position = right
+tray-padding = 0
+
 [bar/main]
 
 cursor-click = pointer
@@ -140,8 +143,8 @@ modules-left = space-end space-alt i3 space-alt space-end
 modules-center =
 modules-right = space-end space-alt filesystem space xbacklight space pavolume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt space-end
 
-tray-position = right
-tray-padding = 0
+#tray-position = right
+#tray-padding = 0
 
 [module/xwindow]
 type = internal/xwindow
