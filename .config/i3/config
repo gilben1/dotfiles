@@ -172,6 +172,8 @@ bindsym Ctrl+$ALT+8 workspace number 8
 bindsym Ctrl+$ALT+9 workspace number 9
 bindsym Ctrl+$ALT+0 workspace number 10
 
+bindsym $ALT+grave workspace blank
+
 # move focused container to workspace
 bindsym Ctrl+$ALT+Shift+1 move container to workspace number 1
 bindsym Ctrl+$ALT+Shift+2 move container to workspace number 2
