@@ -47,10 +47,10 @@ sleep 2
           --peek 3 \
           -r 0x0+1366+10 &
 
-~/.bin/scripts/hideIt.sh --name '^Polybar tray window$' \
-          --direction bottom \
-          --peek 3 \
-          -r 0x768+1366+-10 &
+#~/.bin/scripts/hideIt.sh --name '^Polybar tray window$' \
+#          --direction bottom \
+#          --peek 3 \
+#          -r 0x768+1366+-10 &
 
 
 #~/.bin/scripts/hideIt.sh --name '^polybar-main_LVDS1$' \
