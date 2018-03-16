@@ -309,5 +309,7 @@ exec --no-startup-id mintupdate-launcher
 exec --no-startup-id killall -q fsnotify_mark
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
+exec_always --no-startup-id "pkill conky; conky -c ~/.config/conky/config"
+
 # Background setting
 exec --no-startup-id "~/.bin/scripts/walgrab"
