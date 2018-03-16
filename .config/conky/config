@@ -36,9 +36,12 @@ conky.text = [[
     ${goto 40}$color2${top_mem name 4}$alignr$color${top_mem mem_res 4}
     ${goto 40}$color2${top_mem name 5}$alignr$color${top_mem mem_res 5}
 #
-    ${voffset 10}$alignr$wireless_essid
+    ${voffset 10}${alignr}Battery: ${battery_percent BAT1}%
+    ${voffset 5}${alignr}${font SourceCodePro:size=8}${color2}/home ${fs_used_perc /home}% used
+    ${alignr}${font SourceCodePro:size=8}${color2}/     ${fs_used_perc /}% used$font
+    ${color}${voffset 5}$alignr$wireless_essid
     $alignr$desktop_number Workspaces
-        ${voffset 10}${color2}${alignr}${execi 1200 whoami}@${nodename}
+        ${voffset 5}${color2}${alignr}${execi 1200 whoami}@${nodename}
         ${alignr}${color2}${font SourceCodePro:size=8}uptime: ${color}${uptime_short}
         ${voffset 5}${color2}${font SourceCodePro:size=8}${alignr}kernel: ${color}${kernel}
 ]]
