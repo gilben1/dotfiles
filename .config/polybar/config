@@ -170,8 +170,10 @@ modules-left = space-end space-alt i3 space-alt space-end
 modules-center =
 modules-right = space-end space-alt filesystem space xbacklight space pavolume space vpnup vpndown space wlan space eth battery space memory space cpu space temperature space date space-alt space-end
 
-tray-position = right
-tray-padding = 0
+;tray-position = right
+;tray-padding = 0
+;tray-transparent = true
+;tray-background = ${colors.transparent}
 
 [module/xwindow]
 type = internal/xwindow
