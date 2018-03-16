@@ -19,5 +19,6 @@ email = nickgilbert2@gmail.com
     rro = remote remove origin
     rsuo = remote set-url origin
     lg=log --all --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit
+    undo=checkout --
 [push]
     default = simple
