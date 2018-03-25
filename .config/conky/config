@@ -40,6 +40,7 @@ conky.text = [[
     ${voffset 5}${alignr}${font SourceCodePro:size=8}${color2}/home ${fs_used_perc /home}% used
     ${alignr}${font SourceCodePro:size=8}${color2}/     ${fs_used_perc /}% used$font
     ${color}${voffset 5}$alignr$wireless_essid
+    ${alignr}(${desktop_name})
     $alignr$desktop_number Workspaces
         ${voffset 5}${color2}${alignr}${execi 1200 whoami}@${nodename}
         ${alignr}${color2}${font SourceCodePro:size=8}uptime: ${color}${uptime_short}
