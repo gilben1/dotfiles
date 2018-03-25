@@ -53,3 +53,8 @@ timeout = 20
 #background = "#181818"
 #foreground = "#FFFFFF"
 timeout = 0
+
+[ignore]
+    appname = google-chrome
+    format = ""
+
