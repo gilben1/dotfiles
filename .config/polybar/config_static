@@ -90,7 +90,7 @@ padding = 2
 module-margin-left = 0
 module-margin-right = 0
 
-modules-right = space-end space date space space-end
+#modules-right = space-end space date space space-end
 modules-center = space-end space xwindow space space-end
 
 font-0 = Hack:pixelsize=7;2
