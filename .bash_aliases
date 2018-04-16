@@ -35,7 +35,8 @@ alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
 # Ssh aliases
 alias ada-cs='ssh -4 gnick@ada.cs.pdx.edu'
 alias ada-cat='ssh -4 nickg@ada.cs.pdx.edu'
-alias babbage='ssh -4 nickg@babbage.cs.pdx.edu'
+alias babbage-cat='ssh -4 nickg@babbage.cs.pdx.edu'
+alias babbage-cs='ssh -4 gnick@babbage.cs.pdx.edu'
 alias serenity='ssh -4 nickg@serenity.cat.pdx.edu'
 
 function irc()
@@ -89,3 +90,4 @@ alias i3status-modify='vim ~/.config/i3/i3status.conf'
 alias compton-modify='vim ~/.config/compton.conf'
 
 alias temps="sensors | grep Core"
+

@@ -93,7 +93,7 @@ module-margin-right = 0
 #modules-right = space-end space date space space-end
 modules-center = space-end space xwindow space space-end
 
-font-0 = Hack:pixelsize=7;2
+font-0 = Input:pixelsize=7:antialias=false;2
 font-1 = unifont:pixelsize=10;1
 font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome:pixelsize=7;2
@@ -133,7 +133,7 @@ padding = 2
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = Hack:pixelsize=7:antialias=false;3
+font-0 = Input:pixelsize=7:antialias=false;3
 font-1 = unifont:pixelsize=10;1
 font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome:pixelsize=10;4
