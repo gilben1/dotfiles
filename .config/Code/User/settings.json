@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "'Source Code Pro', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Input', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 11,
     "workbench.colorTheme": "Monokai",
     "workbench.startupEditor": "none",
