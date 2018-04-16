@@ -32,9 +32,11 @@ URxvt.lineSpace:            0
 URxvt.allow_bold:           false
 
 
-urxvt.font: xft:Source Code Pro:pixelsize=11
-urxvt.boldFont: xft:Source Code Pro:pixelsize=11
+!urxvt.font: xft:Source Code Pro:pixelsize=11
+!urxvt.boldFont: xft:Source Code Pro:pixelsize=11
 
+urxvt.font: xft:Input:pixelsize=11
+urxvt.boldFont: xft:Input:pixelsize=11
 ! Fix font space
 URxvt.letterSpace: -1
 
