@@ -5,7 +5,7 @@ conky.config = {
     cpu_avg_samples = 2,
     default_color = 'F9FAF9',
     double_buffer = true,
-    font = 'SourceCodePro:size=11',
+    font = 'Input:size=11',
     draw_shades = false,
     gap_x = 25,
     gap_y = 45,
