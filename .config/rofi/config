@@ -2,7 +2,7 @@ rofi.modi:                           window,run,ssh
 rofi.width:                          50
 rofi.lines:                          15
 rofi.columns:                        1
-rofi.font:                           Source Code Pro 10
+rofi.font:                           Input 10
 rofi.bw:                             7
 rofi.location:                       0
 rofi.padding:                        5
