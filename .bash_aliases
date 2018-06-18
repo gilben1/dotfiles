@@ -47,6 +47,18 @@ function irc()
         listen.sh &
     fi
 
+    mosh gilben@kloe.sugar.coffee
+    kill $(ps -s $$ -o pid=)
+}
+
+function irc_back()
+{
+    #wal -r
+    if [ "$1" = "-v" ] ; then
+        echo "Starting up notification script"
+        listen.sh &
+    fi
+
     mosh nickg@serenity.cat.pdx.edu
     kill $(ps -s $$ -o pid=)
 }
