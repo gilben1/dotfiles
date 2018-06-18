@@ -463,13 +463,15 @@ warn-temperature = 80
 format = <label>
 format-background = ${colors.background-alt}
 format-warn = <label-warn>
+format-warn-overline = ${colors.red_d}
 format-warn-underline = ${colors.red_d}
+format-warn-background = ${colors.background-alt}
 
 label = %temperature%
 label-font = 1
 label-warn = %temperature%
 label-warn-font = ${self.label-font}
-label-warn-foreground = ${colors.alert}
+;label-warn-foreground = ${colors.alert}
 
 ramp-0 = 
 ramp-1 = 
