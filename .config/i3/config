@@ -317,4 +317,4 @@ exec_always --no-startup-id "pkill conky; conky -c ~/.config/conky/config"
 exec --no-startup-id "~/.bin/scripts/walgrab"
 
 # Execute auto rename
-exec --no-startup-id "~/.config/i3/scripts/autoname_workspaces.py"
+exec_always --no-startup-id "~/.config/i3/scripts/autoname_workspaces.py"
