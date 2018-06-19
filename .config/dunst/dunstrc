@@ -40,21 +40,21 @@ history = ctrl+grave
 context = ctrl+shift+period
 
 [urgency_low]
-#background = "#181818"
-#foreground = "#FFFFFF"
+background = "#181818"
+foreground = "#FFFFFF"
 timeout = 5
 
 [urgency_normal]
-#background = "#181818"
-#foreground = "#FFFFFF"
+background = "#181818"
+foreground = "#FFFFFF"
 timeout = 20
 
 [urgency_critical]
-#background = "#181818"
-#foreground = "#FFFFFF"
+background = "#181818"
+foreground = "#FFFFFF"
 timeout = 0
 
 [ignore]
-    summary = "google-chrome"
+    appname = "google-chrome"
     format = ""
 
