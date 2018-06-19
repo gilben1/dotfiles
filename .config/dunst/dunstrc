@@ -55,6 +55,6 @@ foreground = "#FFFFFF"
 timeout = 0
 
 [ignore]
-    appname = "google-chrome"
+    appname = "Google Chrome"
     format = ""
 
