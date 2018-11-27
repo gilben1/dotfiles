@@ -17,10 +17,16 @@ email = nickgilbert2@gmail.com
     brdelo = push origin --delete
     a = add
     puo = push -u origin
+    puos = push -u origin --set-upstream
     rao = remote add origin
     rro = remote remove origin
     rsuo = remote set-url origin
     lg=log --all --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit
     undo=checkout --
+    new-feat = checkout -b
 [push]
     default = simple
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE

@@ -47,7 +47,7 @@ function irc()
         listen.sh &
     fi
 
-    mosh gilben@kloe.sugar.coffee
+    mosh gilben@kloe.life
     kill $(ps -s $$ -o pid=)
 }
 
