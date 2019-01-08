@@ -15,7 +15,7 @@ Xft.hintstyle:              hintslight
 ! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
 !-------------------------------------------------------------------------------
 
-URxvt.iconFile:             /usr/share/icons/Numix-Circle/48/apps/utilities-terminal.svg
+!URxvt.iconFile:             /usr/share/icons/Numix-Circle/48/apps/utilities-terminal.svg
 
 URxvt.depth:                32
 URxvt.geometry:             90x30
@@ -35,8 +35,8 @@ URxvt.allow_bold:           false
 !urxvt.font: xft:Source Code Pro:pixelsize=11
 !urxvt.boldFont: xft:Source Code Pro:pixelsize=11
 
-urxvt.font: xft:Input:pixelsize=11
-urxvt.boldFont: xft:Input:pixelsize=11
+URxvt.font: xft:Input:pixelsize=14
+URxvt.boldFont: xft:Input:pixelsize=14
 ! Fix font space
 URxvt.letterSpace: -1
 
