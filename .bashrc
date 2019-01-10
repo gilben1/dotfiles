@@ -10,7 +10,8 @@ esac
 
 #cat ~/ascii_art/affinitext.ascii
 #cat ~/ascii_art/affinitext7.ascii
-echo "> Bash <"
+cat ~/ascii_art/compenditext.ascii
+#echo "> Bash <"
 
 
 
