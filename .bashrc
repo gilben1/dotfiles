@@ -152,7 +152,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$HOME/.bin/scripts:$HOME/.bin/scripts/i3ass:$PATH"
+export PATH="$HOME/.bin/scripts:$HOME/.bin/scripts/i3ass:$HOME/.cargo/bin:$PATH"
 #xterm-256color
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
