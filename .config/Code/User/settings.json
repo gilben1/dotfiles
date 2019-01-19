@@ -1,6 +1,5 @@
 {
     "editor.fontFamily": "'Input', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontSize": 11,
     "workbench.colorTheme": "Monokai",
     "workbench.startupEditor": "none",
     "window.enableMenuBarMnemonics": false,

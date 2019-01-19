@@ -18,7 +18,7 @@ Xft.hintstyle:              hintslight
 !URxvt.iconFile:             /usr/share/icons/Numix-Circle/48/apps/utilities-terminal.svg
 
 URxvt.depth:                32
-URxvt.geometry:             90x30
+URxvt.geometry:             256x90
 URxvt.transparent:          false
 URxvt.fading:               0
 URxvt.urgentOnBell:         true

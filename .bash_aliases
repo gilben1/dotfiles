@@ -77,3 +77,5 @@ alias mcecs-vpn='cd ~/.config/openvpn; sudo openvpn --config cecs.ovpn'
 alias check-for-updates='sudo apt-get -u upgrade --assume-no'
 
 #alias fix-firefox="sudo sed -i 's/Exec=firefox/Exec=bash -c \'GTK_THEME=\" \"\' firefox/' /usr/share/applications/firefox.desktop"
+
+alias parallax="ssh -t nickg@rita.cat.pdx.edu 'ssh gilben@localhost -p 1985'"
